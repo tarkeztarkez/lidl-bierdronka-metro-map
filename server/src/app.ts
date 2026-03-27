@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { resolve } from "node:path";
+import { extname, resolve } from "node:path";
 
 import { Hono } from "hono";
 import { cors } from "hono/cors";
@@ -12,6 +12,22 @@ import { overlayRoute } from "./routes/overlay";
 export const app = new Hono();
 const frontendDistDir = resolve(repoRoot, "frontend", "dist");
 const frontendIndexPath = resolve(frontendDistDir, "index.html");
+const contentTypesByExtension: Record<string, string> = {
+  ".css": "text/css; charset=utf-8",
+  ".html": "text/html; charset=utf-8",
+  ".js": "text/javascript; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
+  ".map": "application/json; charset=utf-8",
+  ".png": "image/png",
+  ".svg": "image/svg+xml",
+  ".woff": "font/woff",
+  ".woff2": "font/woff2",
+};
+
+function fileHeaders(filePath: string, detectedType?: string): Record<string, string> | undefined {
+  const contentType = detectedType || contentTypesByExtension[extname(filePath)];
+  return contentType ? { "content-type": contentType } : undefined;
+}
 
 app.use("*", cors());
 
@@ -41,12 +57,12 @@ app.get("*", async (c) => {
   if (requestedPath.startsWith(frontendDistDir) && existsSync(requestedPath)) {
     const file = Bun.file(requestedPath);
     return new Response(file, {
-      headers: file.type ? { "content-type": file.type } : undefined,
+      headers: fileHeaders(requestedPath, file.type),
     });
   }
 
   const indexFile = Bun.file(frontendIndexPath);
   return new Response(indexFile, {
-    headers: indexFile.type ? { "content-type": indexFile.type } : undefined,
+    headers: fileHeaders(frontendIndexPath, indexFile.type),
   });
 });
