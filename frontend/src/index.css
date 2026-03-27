@@ -1,0 +1,63 @@
+:root {
+  --paper: #f7f1e8;
+  --ink: #31261c;
+  --ink-strong: #16110b;
+  --muted: #6f6257;
+  --faint: #8a7b6a;
+  --line: rgba(38, 28, 17, 0.12);
+  --accent: #c54e22;
+  --accent-strong: #7f3116;
+  --shadow:
+    0 24px 60px rgba(14, 17, 22, 0.18), 0 10px 28px rgba(13, 16, 20, 0.12);
+  --font-body: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'IBM Plex Serif', Georgia, serif;
+
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 199, 117, 0.12), transparent 22%),
+    linear-gradient(180deg, #0d1014, #14171d 40%, #181c23);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+::selection {
+  background: rgba(197, 78, 34, 0.2);
+  color: var(--ink-strong);
+}
