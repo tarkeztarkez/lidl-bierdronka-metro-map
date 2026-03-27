@@ -39,8 +39,14 @@ app.get("*", async (c) => {
     : resolve(frontendDistDir, `.${url.pathname}`);
 
   if (requestedPath.startsWith(frontendDistDir) && existsSync(requestedPath)) {
-    return new Response(Bun.file(requestedPath));
+    const file = Bun.file(requestedPath);
+    return new Response(file, {
+      headers: file.type ? { "content-type": file.type } : undefined,
+    });
   }
 
-  return new Response(Bun.file(frontendIndexPath));
+  const indexFile = Bun.file(frontendIndexPath);
+  return new Response(indexFile, {
+    headers: indexFile.type ? { "content-type": indexFile.type } : undefined,
+  });
 });
