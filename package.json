@@ -1,0 +1,30 @@
+{
+  "name": "lidl-bierdronka-metro-map",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n server,frontend \"cd server && bun run dev\" \"cd frontend && bun run dev\"",
+    "dev:server": "cd server && bun run dev",
+    "dev:frontend": "cd frontend && bun run dev",
+    "refresh:data": "cd server && bun run refresh:data",
+    "build": "bun run build:server && bun run build:frontend",
+    "build:server": "cd server && bun run typecheck",
+    "build:frontend": "cd frontend && bun run build",
+    "typecheck": "bun run build:server && cd frontend && bunx tsc -b",
+    "lint": "bun run lint:frontend",
+    "lint:frontend": "cd frontend && bun run lint"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/geojson": "^7946.0.16",
+    "concurrently": "^9.2.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.3.4",
+    "hono": "^4.12.9",
+    "zod": "^4.3.6"
+  }
+}

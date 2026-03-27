@@ -4,108 +4,6036 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "sample-store-1",
-        "name": "Lidl Śródmieście",
+        "id": "store-282141267",
+        "name": "Biedronka",
         "category": "store",
         "subtype": "supermarket",
-        "source": "sample",
-        "brand": "Lidl"
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.0122,
-          52.2297
+          21.0960624,
+          52.2448251
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "id": "sample-store-2",
-        "name": "Biedronka Powiśle",
+        "id": "store-286604414",
+        "name": "Biedronka",
         "category": "store",
         "subtype": "supermarket",
-        "source": "sample",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0568278,
+          52.2472933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-302722319",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9974293,
+          52.2271892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-304352833",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.199971,
+          52.1738517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-309749930",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0423029,
+          52.2500097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-411513480",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9346101,
+          52.2220578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-461166142",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0633017,
+          52.2392354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-461166153",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
         "brand": "Biedronka"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.0225,
-          52.235
+          21.0633777,
+          52.2325974
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "id": "sample-store-3",
-        "name": "Lidl Wola",
+        "id": "store-519551930",
+        "name": "Biedronka",
         "category": "store",
         "subtype": "supermarket",
-        "source": "sample",
-        "brand": "Lidl"
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.035,
-          52.241
+          21.0840168,
+          52.2485186
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "id": "sample-store-4",
-        "name": "Biedronka Ochota",
+        "id": "store-676244907",
+        "name": "Biedronka",
         "category": "store",
         "subtype": "supermarket",
-        "source": "sample",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9816309,
+          52.201852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-778478001",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8819242,
+          52.1972837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-845791933",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9357681,
+          52.2847747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1137307512",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8065846,
+          52.166093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1229513208",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
         "brand": "Biedronka"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.99,
-          52.24
+          20.805009,
+          52.1631424
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "id": "sample-store-5",
-        "name": "Lidl Praga",
+        "id": "store-1282468919",
+        "name": "Lidl",
         "category": "store",
         "subtype": "supermarket",
-        "source": "sample",
+        "source": "overpass",
         "brand": "Lidl"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.06,
-          52.215
+          20.9209835,
+          52.2088044
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "id": "sample-store-6",
-        "name": "Biedronka Targówek",
+        "id": "store-1282482320",
+        "name": "Biedronka",
         "category": "store",
         "subtype": "supermarket",
-        "source": "sample",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.980384,
+          52.2219951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1300250590",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0134968,
+          52.1784849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1490193540",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0182217,
+          52.272152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1493537025",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.964615,
+          52.2035957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1550534775",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.999924,
+          52.2373316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1580686741",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9664816,
+          52.2004167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1673573519",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0702124,
+          52.2483355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1680530236",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1123616,
+          52.3349476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1750765627",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0339463,
+          52.2014035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1806708737",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0032067,
+          52.2512634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1853296128",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8961715,
+          52.1343012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1917978578",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0793137,
+          52.3055881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1967580513",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9213718,
+          52.3905531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1991569254",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0389351,
+          52.1722249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2127505528",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9883535,
+          52.2530978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2150422287",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0262756,
+          52.1810327
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2262718672",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9876509,
+          52.2335231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2418294588",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9346243,
+          52.3990323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2535770623",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0378403,
+          52.1583985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2548265062",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9950724,
+          52.2358716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2591323934",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.994864,
+          52.1697451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2600417201",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1139829,
+          52.2373184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2620001214",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1182308,
+          52.2788603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2624013602",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0725687,
+          52.1567202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2633012362",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9374559,
+          52.2012406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2683126939",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9364103,
+          52.2912076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2740423630",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.910559,
+          52.2282841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-2912430414",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9762619,
+          52.234969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3013983804",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0945747,
+          52.2469712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3014212568",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.170717,
+          52.2519958
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3024349719",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.057276,
+          52.3013771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3031428106",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9965483,
+          52.2448957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3118068429",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.975553,
+          52.1985945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3121934165",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0685654,
+          52.2738384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3218845255",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9939725,
+          52.2305134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3219209980",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0943923,
+          52.2217662
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3366686595",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0034319,
+          52.173927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3423354994",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.29913,
+          52.24102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3513036059",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0734345,
+          52.2421725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3518954680",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9017526,
+          52.2297303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3526732166",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9665057,
+          52.2445654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3539706840",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8810369,
+          52.3141839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3561370585",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9819591,
+          52.2374061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3587462817",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
         "brand": "Biedronka"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.085,
-          52.23
+          21.1221358,
+          52.091588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3690576692",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9722365,
+          52.2585686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3703521520",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0577647,
+          52.1473634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-3824880392",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1126133,
+          52.2908541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4036101689",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0360576,
+          52.2337856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4156357616",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8934619,
+          52.3394908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4165951589",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9050865,
+          52.3295998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4245017589",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0208549,
+          52.1563744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4275214111",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0680973,
+          52.1645511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4285807465",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0348222,
+          52.1553018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4286855910",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0181917,
+          52.2368142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4351698767",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1237507,
+          52.3444754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4562335225",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0328703,
+          52.0828109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4574038921",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9945227,
+          52.2419502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4732419424",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0038387,
+          52.1812317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4854722321",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0404592,
+          52.2659213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-4963137263",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9754098,
+          52.2375305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5018046322",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8952973,
+          52.2199509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5038366691",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0611905,
+          52.2684999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5110441529",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0117895,
+          52.2321892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5236208559",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0571977,
+          52.2686271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5291126139",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9166027,
+          52.2478024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5293917242",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0472413,
+          52.1872537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5341651060",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0437551,
+          52.1465539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5380275103",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0621269,
+          52.3158224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5388233668",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1585112,
+          52.2561303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5394061592",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9895126,
+          52.1856419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5420944562",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0249997,
+          52.1918102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5440379630",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1095892,
+          52.2454002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5440448353",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0667236,
+          52.2264951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5455197921",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.028823,
+          52.2598832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5659018400",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0526783,
+          52.2525346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5734039560",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.94881,
+          52.2262692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5819256853",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9306444,
+          52.2734773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-5922184787",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9937203,
+          52.251115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6013188201",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0202899,
+          52.1788851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6052608020",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9629124,
+          52.3191061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6215795485",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0748148,
+          52.1672016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6486479573",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.01724,
+          52.2313777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6516598744",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8486766,
+          52.215696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6681678457",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0657036,
+          52.1415761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6734310594",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1126369,
+          52.2338754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6765113487",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0435639,
+          52.1776284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6900650506",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0053073,
+          52.1874977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-6949548591",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0218459,
+          52.2877528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7114064188",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0751566,
+          52.2474273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7211522677",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9590226,
+          52.236707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7294337070",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8438537,
+          52.24744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7553531487",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1819888,
+          52.2455746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7562355328",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2123951,
+          52.3261917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7589567397",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8680211,
+          52.3461285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7711794939",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1650663,
+          52.3170285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-7819785204",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9847163,
+          52.2283792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8292941694",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0342353,
+          52.2497079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8422188661",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9946633,
+          52.2380424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8477005640",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.956457,
+          52.2250625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8553195046",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0482004,
+          52.204064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8608090108",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "convenience",
+        "source": "overpass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.993875,
+          52.2335292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8629166797",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2439186,
+          52.2233823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8651228274",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1578642,
+          52.3012147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8663445875",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.045167,
+          52.256434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8677782371",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0321971,
+          52.1551588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8679713217",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9002124,
+          52.3345049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8761129121",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9744479,
+          52.3188293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8777433607",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9320583,
+          52.2885832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8838506285",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9381771,
+          52.2702311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8889826543",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1487978,
+          52.2695705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-8918530603",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8830647,
+          52.2055334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9389252487",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.155701,
+          52.2161509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9557607337",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.084058,
+          52.2861362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9585643793",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8638058,
+          52.2886042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9664485070",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0464129,
+          52.1863605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9815470198",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8685293,
+          52.1942763
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9861955866",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9558601,
+          52.2217122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9922747957",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0372101,
+          52.2255205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9946897094",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2466203,
+          52.1182143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9957357918",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8988232,
+          52.2192414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-9984073583",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9246436,
+          52.2853401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-10075459736",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0281493,
+          52.240737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-10218776570",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0374211,
+          52.3173287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-10302498497",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0136528,
+          52.1838027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-10651796507",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1386296,
+          52.192007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11230942670",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9828687,
+          52.2506713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11230942671",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9317379,
+          52.2960536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11299498900",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9793484,
+          52.2600102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11423473381",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0215664,
+          52.2367352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11456209309",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9632815,
+          52.1968027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11514817771",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0927062,
+          52.2392454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11580201226",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9704457,
+          52.0575168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11747750326",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9914667,
+          52.2245889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11841409538",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9778127,
+          52.1822937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-11941713469",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9926011,
+          52.1799622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-12031869629",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9706456,
+          52.1314111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-12437567449",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9499139,
+          52.2124261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-12593943237",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9701592,
+          52.3101685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-12961086099",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0459697,
+          52.156715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-13351034401",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9931103,
+          52.1589454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-13428807309",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Propark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0343054,
+          52.249731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-13502365677",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1355067,
+          52.1839814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-13520073466",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9943843,
+          52.1755144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-13569866416",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0002111,
+          52.2331104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-29300165",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0428197,
+          52.1420216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-30322671",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9700042,
+          52.2086255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-30666663",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0250727,
+          52.1699799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-30957351",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0830861,
+          52.2267304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-31060034",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.109456,
+          52.2389342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-34423977",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0979359,
+          52.249421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-34428195",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9585419,
+          52.1894213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-40433682",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8391897,
+          52.1899413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-59421803",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9186988,
+          52.2513234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-62172885",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl Polska Sklepy Spożywcze Sp. z o. o. Sp. k."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0989604,
+          52.2422648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-69365957",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0368207,
+          52.1443228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-70990513",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9493332,
+          52.2709809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-80428485",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0415085,
+          52.2579807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-95030898",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9891777,
+          52.2407774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-99472200",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9341109,
+          52.3937508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-101988909",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8132582,
+          52.1710396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-105051520",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9611604,
+          52.3180126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-105276545",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.82835,
+          52.1731939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-107182992",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9577727,
+          52.1913931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-110432763",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9140514,
+          52.2400665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-111787414",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8619214,
+          52.1916361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-113937062",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9374052,
+          52.2355252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-118974761",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8689448,
+          52.1988726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-119444202",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9391031,
+          52.3252419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-121674963",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0335143,
+          52.2958506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-128450834",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8933317,
+          52.1832138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-129140111",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9157522,
+          52.2247163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-129413942",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.966361,
+          52.2111626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-132576387",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2545276,
+          52.0999089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-147290967",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0170671,
+          52.0822326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-149581525",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0221293,
+          52.2944214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-154367262",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9217759,
+          52.1536513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-166954992",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0325859,
+          52.2832435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-168565689",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.960111,
+          52.2720049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-169430807",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9321717,
+          52.2700367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-173043959",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0638236,
+          52.1749414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-173211400",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1716356,
+          52.1605429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-173973429",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0474759,
+          52.2769067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-177648407",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1133699,
+          52.3173913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-179344782",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl Sklepy Spożywcze Sp. z o.o."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0627736,
+          52.3078125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-196695069",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9849245,
+          52.2599716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-206113190",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1128211,
+          52.2822108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-207173358",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9201522,
+          52.2084146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-208444909",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.167768,
+          52.3997526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-214675190",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8988546,
+          52.2361018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-218691338",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9388365,
+          52.2511897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-218854782",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.948289,
+          52.2454133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-221567334",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2559854,
+          52.3465117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-221573904",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2416094,
+          52.3394651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-221734166",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1907926,
+          52.3269408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-225399445",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2685151,
+          52.2517842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-229146513",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0790469,
+          52.2814522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-229621114",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.049351,
+          52.0916756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-231777752",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0088037,
+          52.0816535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-238299266",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "LIDL"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0515247,
+          52.1337226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-240385174",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9314252,
+          52.3055036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-242633145",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8871024,
+          52.1816477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-244396312",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0265963,
+          52.0696053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-244701673",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9185375,
+          52.0975672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-252178787",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9461978,
+          52.3316908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-253832707",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2234775,
+          52.2221799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-254148898",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9634548,
+          52.3359367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-254262558",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8931339,
+          52.2174207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-258507499",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8154547,
+          52.2520935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-269945806",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.899032,
+          52.1886072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-288935501",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0025171,
+          52.228766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-295212178",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0894568,
+          52.3026121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-297697299",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9244295,
+          52.3749052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-298000830",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1209693,
+          52.2002088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-300211010",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9119866,
+          52.2369675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-302201111",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.995589,
+          52.108462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-307801789",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.051903,
+          52.31782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-309655074",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8959623,
+          52.229978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-312987045",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl Polska Sklepy Spożywcze Sp. z o.o. Sp. k."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1182125,
+          52.0979626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-318659746",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0677961,
+          52.3197354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-325226134",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9145823,
+          52.2507694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-345346778",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0842088,
+          52.2300162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-358304629",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2754384,
+          52.1102328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-362228166",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2591585,
+          52.0868194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-371700725",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1902194,
+          52.1463386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-377598195",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.153293,
+          52.309214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-377604752",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1928009,
+          52.3137165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-377957242",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2237688,
+          52.2189116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-388142740",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8488952,
+          52.1449952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-390611425",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0599954,
+          52.2668294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-392181423",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8037167,
+          52.1549363
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-404647800",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9231884,
+          52.3841508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-409448946",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8545478,
+          52.2463037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-415957574",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1640262,
+          52.2036456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-427468324",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1553762,
+          52.2587818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-437345244",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1136554,
+          52.3346684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-438057309",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1035145,
+          52.3262558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-439961592",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1973315,
+          52.2474893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-441519780",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2548445,
+          52.2363035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-443346632",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0305162,
+          52.370199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-496654749",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.10904,
+          52.1661503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-517885866",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0972436,
+          52.1244537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-541747729",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1944142,
+          52.3326885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-564633670",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.137549,
+          52.2229379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-581633287",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.239788,
+          52.0822316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-590388575",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2393069,
+          52.3394196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-598742227",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl Sklepy Spozywcze Sp. z o. o."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0291185,
+          52.3629619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-630698676",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0296637,
+          52.2997237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-633194244",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0753806,
+          52.1347819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-656708002",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2129354,
+          52.1579939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-659811209",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8668155,
+          52.0559498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-686310038",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1076486,
+          52.1643696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-693914960",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0917679,
+          52.1471308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-694551160",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8084696,
+          52.2092699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-705756947",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8039738,
+          52.0912285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-709020906",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0345588,
+          52.3944153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-725764871",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.23574,
+          52.099192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-740020214",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0679442,
+          52.1672093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-743104443",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1521406,
+          52.2225847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-744161204",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9385316,
+          52.1733168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-750681071",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9452108,
+          52.3503331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-760916609",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0917842,
+          52.2346654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-770011598",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1632776,
+          52.1714858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-775325120",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1120632,
+          52.1063095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-781104026",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0155895,
+          52.0716779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-796295078",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0442425,
+          52.0852458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-833807637",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0481682,
+          52.0918953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-847371005",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8623562,
+          52.1692874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-848325285",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0489698,
+          52.211825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-854971286",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1543093,
+          52.3000864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-870668837",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9596651,
+          52.0838553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-881750379",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.22544,
+          52.2547601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-901293930",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0735447,
+          52.0845044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-901976935",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0400056,
+          52.1689989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-911599249",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8320782,
+          52.1802965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-923365095",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8998688,
+          52.1322868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-946115558",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.953502,
+          52.3446983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-946486668",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9865877,
+          52.3039983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-947449555",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9299311,
+          52.1638616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-949112521",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0176217,
+          52.1090589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-958971484",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2359989,
+          52.2238947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-960891807",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1575124,
+          52.2584675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-961544800",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0444319,
+          52.360923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-962914940",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2052147,
+          52.1660707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-963021500",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1918265,
+          52.1826157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-963418736",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1728052,
+          52.2066882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-964863289",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0957414,
+          52.2249324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-977390358",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9505324,
+          52.3467972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-977506945",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9396392,
+          52.3235954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-982906421",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9273213,
+          52.383611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-994900657",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.258064,
+          52.1113346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1041414248",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9702105,
+          52.0815664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1060557620",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2244299,
+          52.1303863
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1068902132",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0649522,
+          52.2525086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1069656542",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0221153,
+          52.1045436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1080639232",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2820579,
+          52.2523987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1093763012",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8689757,
+          52.1813052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1134834158",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8560622,
+          52.1898851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1146693765",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2553712,
+          52.1072216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1146984273",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2560148,
+          52.3552847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1201024255",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1668669,
+          52.3467467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1215460366",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.850265,
+          52.1730355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1262909824",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0817773,
+          52.2934151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1276502444",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl",
+        "operator": "Lidl sp. z o.o"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9381141,
+          52.3363303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1298813077",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2728205,
+          52.3585047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1315082125",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9526196,
+          52.1923341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1339220960",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "operator": "Jeronimo Martins Polska S.A."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.1106723,
+          52.2126009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1352734541",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0325315,
+          52.3278673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1359842474",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.992042,
+          52.327518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1361380787",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.8792279,
+          52.2160131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1373145941",
+        "name": "Biedronka",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.3150435,
+          52.2163115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "store-1436984604",
+        "name": "Lidl",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "overpass",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.2866485,
+          52.2221023
         ]
       }
     }
