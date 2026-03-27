@@ -325,18 +325,24 @@ function RouteCell({
   mode,
   durationText,
   transitSegments,
+  isLoading,
 }: {
   mode: RouteMode
   durationText?: string
   transitSegments?: TransitSegment[]
+  isLoading: boolean
 }) {
   return (
     <div className="route-mode-card">
       <span className={`route-mode-glyph route-mode-glyph-${modeIcon(mode)}`} aria-hidden="true">
         {renderModeIcon(mode)}
       </span>
-      <strong className="route-duration">{formatCompactDuration(durationText)}</strong>
-      {mode === 'transit' && transitSegments?.length ? (
+      {isLoading ? (
+        <span className="route-inline-spinner" aria-label="Loading" />
+      ) : (
+        <strong className="route-duration">{formatCompactDuration(durationText)}</strong>
+      )}
+      {!isLoading && mode === 'transit' && transitSegments?.length ? (
         <span className="transit-hover-card" role="tooltip">
           <span className="transit-badge-row">
             {transitSegments.map((segment, index) => (
@@ -374,6 +380,7 @@ export function MapView({
   isRoutesLoading,
 }: MapViewProps) {
   const highlightPoints = useMemo(() => HIGHLIGHT_POINTS, [])
+  const routeOriginMarkerRef = useRef<L.Marker | null>(null)
   const sourcePoints = useMemo(
     () => {
       if (metadata.source === 'demo') {
@@ -445,6 +452,14 @@ export function MapView({
       transit: unavailableMode('transit'),
     },
   }))
+
+  useEffect(() => {
+    if (!routeOrigin) {
+      return
+    }
+
+    routeOriginMarkerRef.current?.openPopup()
+  }, [routeOrigin, routes, isRoutesLoading])
 
   return (
     <section className="map-shell" aria-label="Map visualization">
@@ -548,20 +563,20 @@ export function MapView({
           ))}
 
           {routeOrigin ? (
-            <>
-              <Marker
-                position={[routeOrigin.lat, routeOrigin.lng]}
-                pane="access-origin-pane"
-                icon={originIcon()}
-              />
+            <Marker
+              position={[routeOrigin.lat, routeOrigin.lng]}
+              pane="access-origin-pane"
+              icon={originIcon()}
+              ref={routeOriginMarkerRef}
+            >
               <Popup
-                position={[routeOrigin.lat, routeOrigin.lng]}
                 className="route-popup"
                 maxWidth={420}
                 minWidth={360}
                 closeButton={false}
                 closeOnClick={false}
                 autoClose={false}
+                autoPan={false}
               >
                 <div className="route-popup-shell">
                   <div className="route-popup-head">
@@ -571,7 +586,6 @@ export function MapView({
                     <button type="button" className="route-close-button" onClick={onRouteOriginClear}>
                       Close
                     </button>
-                    {isRoutesLoading ? <span className="route-loading-pill">Updating</span> : null}
                   </div>
                   <div className="route-popup-grid">
                     {popupResults.map((result) => (
@@ -592,6 +606,7 @@ export function MapView({
                                 mode={mode}
                                 durationText={modeResult.durationText}
                                 transitSegments={modeResult.transitSegments}
+                                isLoading={isRoutesLoading}
                               />
                             )
                           })}
@@ -601,7 +616,7 @@ export function MapView({
                   </div>
                 </div>
               </Popup>
-            </>
+            </Marker>
           ) : null}
         </MapContainer>
 
