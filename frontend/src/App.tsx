@@ -258,7 +258,6 @@ function App() {
           metroMinutes={metroMinutes}
           milkbarMinutes={milkbarMinutes}
           showMilkbars={showMilkbars}
-          status={status}
         />
       </main>
     </div>

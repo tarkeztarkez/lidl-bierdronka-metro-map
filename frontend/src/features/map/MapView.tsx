@@ -133,7 +133,6 @@ interface MapViewProps {
   metroMinutes: number
   milkbarMinutes: number
   showMilkbars: boolean
-  status: 'loading' | 'live' | 'demo' | 'error'
 }
 
 function featuresByKind(
@@ -183,7 +182,6 @@ export function MapView({
   metroMinutes,
   milkbarMinutes,
   showMilkbars,
-  status,
 }: MapViewProps) {
   const sourcePoints = useMemo(
     () => {
@@ -250,16 +248,6 @@ export function MapView({
 
   return (
     <section className="map-shell" aria-label="Map visualization">
-      <div className="map-meta">
-        <div>
-          <p className="eyebrow">Map stage</p>
-          <h2>Overlap zone</h2>
-        </div>
-        <div className={`map-state map-state-${status}`}>
-          {isLoading ? 'Recomputing overlay' : status === 'demo' ? 'Demo geometry' : 'Live overlay'}
-        </div>
-      </div>
-
       <div className="map-frame">
         <MapContainer
           className="leaflet-map"
@@ -379,16 +367,6 @@ export function MapView({
                   : showMilkbars ? 'Triple-overlap only' : 'Intersection only'}
               </span>
             </div>
-          </div>
-
-          <div className="legend-card legend-card-quiet">
-            <span className="legend-title">View</span>
-            <p>
-              {metadata.note ??
-                showMilkbars
-                ? 'Use the sliders to redraw the triple overlap between grocery, metro, and milkbar access.'
-                : 'Use the sliders to redraw the overlap between grocery access and metro access.'}
-            </p>
           </div>
         </div>
       </div>
