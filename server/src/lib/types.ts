@@ -1,6 +1,6 @@
 import type { Feature, FeatureCollection, Geometry, Polygon, MultiPolygon, Point } from "geojson";
 
-export type PoiCategory = "store" | "metro";
+export type PoiCategory = "store" | "metro" | "milkbar";
 
 export type PoiFeature = Feature<Point, PoiProperties>;
 
@@ -9,7 +9,7 @@ export interface PoiProperties {
   name: string;
   category: PoiCategory;
   subtype: string;
-  source: "overpass" | "sample";
+  source: "osm" | "sample";
   minutesMax?: number;
   brand?: string;
   operator?: string;
@@ -32,13 +32,17 @@ export interface LayerMetadata {
   minutesAvailable: number[];
   updatedAt: string;
   source: string;
+  debug?: {
+    valhallaPoiCounts?: Record<string, number>;
+    fallbackPoiCounts?: Record<string, number>;
+  };
 }
 
 export interface CacheMetadata {
   generatedAt: string;
   source: string;
   supportedMinutes: { min: number; max: number };
-  counts: { stores: number; metros: number };
+  counts: { stores: number; metros: number; milkbars: number };
   layers: Record<PoiCategory, LayerMetadata>;
   bbox: {
     minLon: number;
@@ -58,9 +62,11 @@ export interface MetadataResponse {
   cacheReady: boolean;
   source: string;
   supportedMinutes: { min: number; max: number };
-  counts: { stores: number; metros: number };
+  counts: { stores: number; metros: number; milkbars: number };
   bbox: CacheMetadata["bbox"];
   storeMinutes: number[];
   metroMinutes: number[];
+  milkbarMinutes: number[];
   lastRefreshAt: string | null;
+  layers?: CacheMetadata["layers"];
 }

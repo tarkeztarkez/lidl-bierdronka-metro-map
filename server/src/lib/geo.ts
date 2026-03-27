@@ -1,14 +1,18 @@
 import {
+  bboxPolygon,
   cleanCoords,
   circle,
+  combine,
   featureCollection,
   intersect,
+  multiPolygon,
   point,
   union,
 } from "@turf/turf";
 import type { Feature, FeatureCollection, Geometry, GeoJsonProperties, MultiPolygon, Point, Polygon } from "geojson";
 
 import type { IsochroneFeature, PoiFeature } from "./types";
+import { WARSAW_BBOX } from "./constants";
 
 export function makePointFeature(longitude: number, latitude: number, properties: GeoJsonProperties): Feature<Point> {
   return point([longitude, latitude], properties);
@@ -58,6 +62,36 @@ export function mergePolygons(features: Array<Feature<Polygon | MultiPolygon>>):
   }
 }
 
+export function combinePolygons(
+  features: Array<Feature<Polygon | MultiPolygon>>,
+): Feature<Polygon | MultiPolygon> | null {
+  const clean = features
+    .filter(Boolean)
+    .map((feature) => cleanCoords(feature) as Feature<Polygon | MultiPolygon>);
+
+  if (clean.length === 0) {
+    return null;
+  }
+
+  if (clean.length === 1) {
+    return clean[0] ?? null;
+  }
+
+  try {
+    const combined = combine(featureCollection(clean));
+    const first = combined.features[0];
+    return (first as Feature<Polygon | MultiPolygon> | undefined) ?? null;
+  } catch {
+    const coordinates = clean.flatMap((feature) =>
+      feature.geometry.type === "Polygon"
+        ? [feature.geometry.coordinates]
+        : feature.geometry.coordinates,
+    );
+
+    return multiPolygon(coordinates) as Feature<MultiPolygon>;
+  }
+}
+
 export function intersectPolygons(
   a: Feature<Polygon | MultiPolygon> | null,
   b: Feature<Polygon | MultiPolygon> | null,
@@ -68,6 +102,24 @@ export function intersectPolygons(
 
   const result = intersect(featureCollection([a, b]));
   return (result as Feature<Polygon | MultiPolygon> | null) ?? null;
+}
+
+export function clipToWarsawBounds(
+  feature: Feature<Polygon | MultiPolygon> | null,
+): Feature<Polygon | MultiPolygon> | null {
+  if (!feature) {
+    return null;
+  }
+
+  const bounds = bboxPolygon([
+    WARSAW_BBOX.minLon,
+    WARSAW_BBOX.minLat,
+    WARSAW_BBOX.maxLon,
+    WARSAW_BBOX.maxLat,
+  ]) as Feature<Polygon>;
+
+  const clipped = intersect(featureCollection([feature, bounds]));
+  return (clipped as Feature<Polygon | MultiPolygon> | null) ?? null;
 }
 
 export function geometryIsEmpty(geometry: Geometry | null | undefined): boolean {

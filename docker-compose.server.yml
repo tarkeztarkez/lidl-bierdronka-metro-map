@@ -1,0 +1,15 @@
+# documentation: https://github.com/tarkeztarkez/lidl-bierdronka-metro-map
+# slogan: Warsaw access map served from committed cache files without refresh at runtime.
+# tags: bun,react,maps,geojson
+# port: 3001
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend-runtime
+    container_name: lidl-bierdronka-app
+    restart: unless-stopped
+    environment:
+      - PORT=3001
+      - SERVICE_URL_APP_3001

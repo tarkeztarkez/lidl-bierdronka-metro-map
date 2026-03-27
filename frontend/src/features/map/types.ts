@@ -37,7 +37,7 @@ export interface GeoJsonFeatureCollection {
 export interface SourcePoint {
   id?: string
   name: string
-  kind: 'store' | 'metro'
+  kind: 'store' | 'metro' | 'milkbar'
   position: Position
   note?: string
 }
@@ -46,14 +46,17 @@ export interface ApiMetadata {
   refreshedAt?: string
   storeCount?: number
   metroCount?: number
+  milkbarCount?: number
   storeMinutesRange?: [number, number]
   metroMinutesRange?: [number, number]
+  milkbarMinutesRange?: [number, number]
   bounds?: [number, number, number, number]
   source?: string
   note?: string
   sourcePoints?: SourcePoint[]
   storePoints?: SourcePoint[]
   metroPoints?: SourcePoint[]
+  milkbarPoints?: SourcePoint[]
 }
 
 export interface OverlayResponse {
@@ -71,3 +74,5 @@ export interface LiveResponse {
   message?: string
   demo?: boolean
 }
+
+export type OverlayDisplayMode = 'full' | 'intersection'

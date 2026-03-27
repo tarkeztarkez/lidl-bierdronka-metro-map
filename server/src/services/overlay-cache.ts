@@ -4,15 +4,47 @@ import { join } from "node:path";
 import type { Feature, FeatureCollection, MultiPolygon, Polygon } from "geojson";
 
 import { cacheDir, ensureProjectDirs, rawDataDir } from "../lib/paths";
-import { intersectPolygons, makeFallbackLayer } from "../lib/geo";
+import { clipToWarsawBounds, intersectPolygons, makeFallbackLayer } from "../lib/geo";
 import type { CacheMetadata, IsochroneFeature, LayerMetadata, MetadataResponse, PoiCategory, PoiFeature } from "../lib/types";
 import { mapLimit } from "../lib/parallel";
-import { getRefreshConcurrency } from "../lib/refresh-config";
-import { sampleMetros, sampleStores } from "./sample-data";
+import { getRefreshConcurrency, getValhallaConcurrency } from "../lib/refresh-config";
+import { sampleMetros, sampleMilkbars, sampleStores } from "./sample-data";
 import { requestIsochrones } from "./valhalla";
 import { runUnionWorkerPool } from "./union-worker-pool";
 
 const metadataPath = join(cacheDir, "metadata.json");
+
+function emptyLayerMetadata(category: PoiCategory, updatedAt: string, supportedMinutes: { min: number; max: number }): LayerMetadata {
+  return {
+    category,
+    poiCount: 0,
+    minuteRange: supportedMinutes,
+    minutesAvailable: [],
+    updatedAt,
+    source: "missing",
+  };
+}
+
+function normalizeMetadata(metadata: CacheMetadata): CacheMetadata {
+  const generatedAt = metadata.generatedAt ?? new Date().toISOString();
+  const supportedMinutes = metadata.supportedMinutes ?? { min: 1, max: 30 };
+
+  return {
+    ...metadata,
+    generatedAt,
+    supportedMinutes,
+    counts: {
+      stores: metadata.counts?.stores ?? 0,
+      metros: metadata.counts?.metros ?? 0,
+      milkbars: metadata.counts?.milkbars ?? 0,
+    },
+    layers: {
+      store: metadata.layers?.store ?? emptyLayerMetadata("store", generatedAt, supportedMinutes),
+      metro: metadata.layers?.metro ?? emptyLayerMetadata("metro", generatedAt, supportedMinutes),
+      milkbar: metadata.layers?.milkbar ?? emptyLayerMetadata("milkbar", generatedAt, supportedMinutes),
+    },
+  };
+}
 
 function layerPath(category: PoiCategory, minutes: number): string {
   return join(cacheDir, `${category}-${String(minutes).padStart(2, "0")}.geojson`);
@@ -41,8 +73,33 @@ function usedSampleFallback(
   return points.some((point) => point.properties.source === "sample");
 }
 
+function countIsochroneSources(
+  perPointIsochrones: IsochroneFeature[][],
+): LayerMetadata["debug"] {
+  const debug: NonNullable<LayerMetadata["debug"]> = {
+    valhallaPoiCounts: {},
+    fallbackPoiCounts: {},
+  };
+
+  for (const pointIsochrones of perPointIsochrones) {
+    for (const isochrone of pointIsochrones) {
+      const target = isochrone.properties.source === "fallback"
+        ? debug.fallbackPoiCounts!
+        : debug.valhallaPoiCounts!;
+      const minuteKey = String(isochrone.properties.minutes);
+      target[minuteKey] = (target[minuteKey] ?? 0) + 1;
+    }
+  }
+
+  return debug;
+}
+
 export async function loadNormalizedPoints(category: PoiCategory): Promise<PoiFeature[]> {
-  const fileName = category === "store" ? "stores.geojson" : "metro.geojson";
+  const fileName = category === "store"
+    ? "stores.geojson"
+    : category === "metro"
+      ? "metro.geojson"
+      : "milkbar.geojson";
   const filePath = join(rawDataDir, fileName);
   const parsed = await readJsonIfExists<FeatureCollection>(filePath);
 
@@ -50,11 +107,12 @@ export async function loadNormalizedPoints(category: PoiCategory): Promise<PoiFe
     return parsed.features as PoiFeature[];
   }
 
-  return category === "store" ? sampleStores() : sampleMetros();
+  return category === "store" ? sampleStores() : category === "metro" ? sampleMetros() : sampleMilkbars();
 }
 
 export async function loadMetadata(): Promise<CacheMetadata | null> {
-  return readJsonIfExists<CacheMetadata>(metadataPath);
+  const metadata = await readJsonIfExists<CacheMetadata>(metadataPath);
+  return metadata ? normalizeMetadata(metadata) : null;
 }
 
 export async function loadLayer(category: PoiCategory, minutes: number): Promise<Feature<Polygon | MultiPolygon> | null> {
@@ -88,9 +146,10 @@ export async function buildAndPersistLayers(
 
   const sortedMinutes = [...minutesRange].sort((left, right) => left - right);
   const refreshConcurrency = getRefreshConcurrency();
+  const valhallaConcurrency = Math.min(getValhallaConcurrency(), points.length);
   const perPointIsochrones = await mapLimit(
     points,
-    refreshConcurrency,
+    valhallaConcurrency,
     (point) => requestIsochrones(point, sortedMinutes),
   );
   const pointCenters = points.map((point) => point.geometry.coordinates as [number, number]);
@@ -127,9 +186,15 @@ export async function buildAndPersistLayers(
         return null;
       }
 
+      const clippedLayer = clipToWarsawBounds(layer);
+      if (!clippedLayer) {
+        return null;
+      }
+
       await writeJson(layerPath(category, minutes), {
-        ...layer,
+        ...clippedLayer,
         properties: {
+          ...(clippedLayer.properties ?? {}),
           category,
           minutes,
           poiCount: points.length,
@@ -156,20 +221,28 @@ export async function buildAndPersistLayers(
     minutesAvailable: minuteOutputs,
     updatedAt: new Date().toISOString(),
     source: "valhalla-or-fallback",
+    debug: countIsochroneSources(perPointIsochrones),
   };
 }
 
 export async function refreshCache(): Promise<CacheMetadata> {
   await ensureProjectDirs();
-  const [stores, metros] = await Promise.all([loadNormalizedPoints("store"), loadNormalizedPoints("metro")]);
+  const [stores, metros, milkbars] = await Promise.all([
+    loadNormalizedPoints("store"),
+    loadNormalizedPoints("metro"),
+    loadNormalizedPoints("milkbar"),
+  ]);
 
-  const storeLayers = await buildAndPersistLayers("store", stores, minuteRange());
-  const metroLayers = await buildAndPersistLayers("metro", metros, minuteRange());
+  const [storeLayers, metroLayers, milkbarLayers] = await Promise.all([
+    buildAndPersistLayers("store", stores, minuteRange()),
+    buildAndPersistLayers("metro", metros, minuteRange()),
+    buildAndPersistLayers("milkbar", milkbars, minuteRange()),
+  ]);
 
   const generatedAt = new Date().toISOString();
   const metadata: CacheMetadata = {
     generatedAt,
-    source: usedSampleFallback(stores) || usedSampleFallback(metros)
+    source: usedSampleFallback(stores) || usedSampleFallback(metros) || usedSampleFallback(milkbars)
       ? "refresh-fallback-sample"
       : "refresh",
     supportedMinutes: {
@@ -179,10 +252,12 @@ export async function refreshCache(): Promise<CacheMetadata> {
     counts: {
       stores: stores.length,
       metros: metros.length,
+      milkbars: milkbars.length,
     },
     layers: {
       store: { ...storeLayers, updatedAt: generatedAt },
       metro: { ...metroLayers, updatedAt: generatedAt },
+      milkbar: { ...milkbarLayers, updatedAt: generatedAt },
     },
     bbox: {
       minLon: 20.8,
@@ -205,15 +280,22 @@ export async function ensureCacheReady(): Promise<CacheMetadata> {
   return refreshCache();
 }
 
-export async function getOverlayGeometry(storeMinutes: number, metroMinutes: number) {
+export async function getOverlayGeometry(
+  storeMinutes: number,
+  metroMinutes: number,
+  milkbarMinutes: number,
+  showMilkbars = false,
+) {
   const metadata = await ensureCacheReady();
-  const [storeLayer, metroLayer] = await Promise.all([
+  const [storeLayer, metroLayer, milkbarLayer] = await Promise.all([
     loadLayer("store", storeMinutes),
     loadLayer("metro", metroMinutes),
+    showMilkbars ? loadLayer("milkbar", milkbarMinutes) : Promise.resolve(null),
   ]);
 
   const storeSamples = sampleStores();
   const metroSamples = sampleMetros();
+  const milkbarSamples = sampleMilkbars();
 
   const fallbackStores = makeFallbackLayer(
     storeSamples.map((feature) => feature.geometry.coordinates as [number, number]),
@@ -237,16 +319,34 @@ export async function getOverlayGeometry(storeMinutes: number, metroMinutes: num
       source: "fallback",
     }),
   );
+  const fallbackMilkbars = showMilkbars
+    ? makeFallbackLayer(
+      milkbarSamples.map((feature) => feature.geometry.coordinates as [number, number]),
+      milkbarMinutes,
+      (index) => ({
+        poiId: milkbarSamples[index]?.properties.id,
+        poiName: milkbarSamples[index]?.properties.name,
+        category: "milkbar",
+        minutes: milkbarMinutes,
+        source: "fallback",
+      }),
+    )
+    : null;
 
   const left = storeLayer ?? fallbackStores;
   const right = metroLayer ?? fallbackMetros;
-  const intersection = intersectPolygons(left, right);
+  const milkbar = showMilkbars ? milkbarLayer ?? fallbackMilkbars : null;
+  const baseIntersection = intersectPolygons(left, right);
+  const intersection = showMilkbars && baseIntersection && milkbar
+    ? intersectPolygons(baseIntersection, milkbar)
+    : baseIntersection;
 
   return {
     metadata,
     intersection,
     storeLayer: left,
     metroLayer: right,
+    milkbarLayer: milkbar,
   };
 }
 
@@ -256,6 +356,7 @@ export async function readRuntimeMetadata(): Promise<MetadataResponse> {
   if (!metadata) {
     const storeSamples = sampleStores();
     const metroSamples = sampleMetros();
+    const milkbarSamples = sampleMilkbars();
 
     return {
       generatedAt: new Date().toISOString(),
@@ -268,6 +369,7 @@ export async function readRuntimeMetadata(): Promise<MetadataResponse> {
       counts: {
         stores: storeSamples.length,
         metros: metroSamples.length,
+        milkbars: milkbarSamples.length,
       },
       bbox: {
         minLon: 20.8,
@@ -277,7 +379,9 @@ export async function readRuntimeMetadata(): Promise<MetadataResponse> {
       },
       storeMinutes: [],
       metroMinutes: [],
+      milkbarMinutes: [],
       lastRefreshAt: null,
+      layers: undefined,
     };
   }
 
@@ -290,6 +394,8 @@ export async function readRuntimeMetadata(): Promise<MetadataResponse> {
     bbox: metadata.bbox,
     storeMinutes: metadata.layers.store.minutesAvailable,
     metroMinutes: metadata.layers.metro.minutesAvailable,
+    milkbarMinutes: metadata.layers.milkbar.minutesAvailable,
     lastRefreshAt: metadata.generatedAt,
+    layers: metadata.layers,
   };
 }

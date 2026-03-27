@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 import { ensureProjectDirs } from "../lib/paths";
 import { DEFAULT_MINUTES_RANGE } from "../lib/constants";
-import { fetchAndNormalizeMetros, fetchAndNormalizeStores } from "./osm";
+import { fetchAndNormalizeMetros, fetchAndNormalizeMilkbars, fetchAndNormalizeStores } from "./osm";
 import { buildAndPersistLayers, loadNormalizedPoints } from "./overlay-cache";
 import type { CacheMetadata } from "../lib/types";
 import { cacheDir } from "../lib/paths";
@@ -26,19 +26,20 @@ export async function runRefreshPipeline(): Promise<CacheMetadata> {
   await ensureProjectDirs();
   const reuseRawCache = Bun.env.REFRESH_SKIP_FETCH === "1";
   console.time("refresh:osm");
-  const [stores, metros] = await (
+  const [stores, metros, milkbars] = await (
     reuseRawCache
-      ? Promise.all([loadNormalizedPoints("store"), loadNormalizedPoints("metro")])
-      : Promise.all([fetchAndNormalizeStores(), fetchAndNormalizeMetros()])
+      ? Promise.all([loadNormalizedPoints("store"), loadNormalizedPoints("metro"), loadNormalizedPoints("milkbar")])
+      : Promise.all([fetchAndNormalizeStores(), fetchAndNormalizeMetros(), fetchAndNormalizeMilkbars()])
   );
   console.timeEnd("refresh:osm");
   console.time("refresh:layers");
-  const [storeLayers, metroLayers] = await Promise.all([
+  const [storeLayers, metroLayers, milkbarLayers] = await Promise.all([
     buildAndPersistLayers("store", stores, minuteRange()),
     buildAndPersistLayers("metro", metros, minuteRange()),
+    buildAndPersistLayers("milkbar", milkbars, minuteRange()),
   ]);
   console.timeEnd("refresh:layers");
-  const usedFallback = usedSampleFallback(stores) || usedSampleFallback(metros);
+  const usedFallback = usedSampleFallback(stores) || usedSampleFallback(metros) || usedSampleFallback(milkbars);
 
   const generatedAt = new Date().toISOString();
   const metadata: CacheMetadata = {
@@ -48,10 +49,12 @@ export async function runRefreshPipeline(): Promise<CacheMetadata> {
     counts: {
       stores: stores.length,
       metros: metros.length,
+      milkbars: milkbars.length,
     },
     layers: {
       store: { ...storeLayers, updatedAt: generatedAt },
       metro: { ...metroLayers, updatedAt: generatedAt },
+      milkbar: { ...milkbarLayers, updatedAt: generatedAt },
     },
     bbox: {
       minLon: 20.8,

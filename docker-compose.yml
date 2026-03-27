@@ -7,6 +7,7 @@ services:
     environment:
       serve_tiles: "True"
       use_default_speeds_config: "True"
+      tile_urls: "https://download.geofabrik.de/europe/poland/mazowieckie-latest.osm.pbf"
     volumes:
       - valhalla_tiles:/custom_files
     restart: unless-stopped

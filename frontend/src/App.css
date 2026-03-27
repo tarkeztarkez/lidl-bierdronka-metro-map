@@ -153,6 +153,52 @@ h2 {
   padding: 8px 4px 0;
 }
 
+.toggle-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 6px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(30, 22, 12, 0.08);
+}
+
+.controls-stack > .toggle-card:first-of-type {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.toggle-button {
+  border: 0;
+  border-radius: 14px;
+  padding: 0.8rem 0.9rem;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.toggle-button:hover {
+  color: var(--ink-strong);
+}
+
+.toggle-button-active {
+  background: rgba(19, 21, 27, 0.92);
+  color: var(--paper);
+  box-shadow: 0 12px 24px rgba(19, 21, 27, 0.16);
+}
+
+.toggle-button:focus-visible {
+  outline: 2px solid rgba(31, 111, 235, 0.48);
+  outline-offset: 2px;
+}
+
 .mode-chip {
   display: inline-flex;
   align-items: center;
@@ -363,6 +409,34 @@ h2 {
   backdrop-filter: blur(12px);
 }
 
+.legend-card-loading p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.88rem;
+}
+
+.loading-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--ink-strong);
+}
+
+.loading-row strong {
+  font-size: 0.94rem;
+}
+
+.loading-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f1b64c, #cf4d28);
+  box-shadow: 0 0 0 0 rgba(207, 77, 40, 0.34);
+  animation: overlay-pulse 1.15s ease-out infinite;
+}
+
 .legend-card-quiet p {
   margin: 6px 0 0;
   color: var(--muted);
@@ -395,6 +469,10 @@ h2 {
   background: linear-gradient(135deg, #4d8cff, #1852b9);
 }
 
+.swatch-milkbar {
+  background: linear-gradient(135deg, #43cb90, #187a57);
+}
+
 .swatch-overlap {
   background: linear-gradient(135deg, rgba(245, 193, 66, 0.95), rgba(237, 149, 45, 0.95));
 }
@@ -411,6 +489,23 @@ h2 {
   color: var(--paper);
   border: none;
   font-size: 0.82rem;
+}
+
+@keyframes overlay-pulse {
+  0% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(207, 77, 40, 0.32);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(207, 77, 40, 0);
+  }
+
+  100% {
+    transform: scale(0.92);
+    box-shadow: 0 0 0 0 rgba(207, 77, 40, 0);
+  }
 }
 
 @media (max-width: 1100px) {

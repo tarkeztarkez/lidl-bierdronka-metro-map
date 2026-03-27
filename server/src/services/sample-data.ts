@@ -19,6 +19,12 @@ const metroSamples: Array<[number, number, string]> = [
   [21.067, 52.245, "Szwedzka"],
 ];
 
+const milkbarSamples: Array<[number, number, string]> = [
+  [21.0114, 52.2311, "Bar Mleczny Śródmieście"],
+  [21.0206, 52.2378, "Bar Mleczny Powiśle"],
+  [21.0012, 52.2254, "Bar Mleczny Mokotowska"],
+];
+
 export function sampleStores(): PoiFeature[] {
   return storeSamples.map(([longitude, latitude, name, brand], index) =>
     makePointFeature(longitude, latitude, {
@@ -39,6 +45,18 @@ export function sampleMetros(): PoiFeature[] {
       name,
       category: "metro",
       subtype: "station",
+      source: "sample",
+    }) as PoiFeature,
+  );
+}
+
+export function sampleMilkbars(): PoiFeature[] {
+  return milkbarSamples.map(([longitude, latitude, name], index) =>
+    makePointFeature(longitude, latitude, {
+      id: `sample-milkbar-${index + 1}`,
+      name,
+      category: "milkbar",
+      subtype: "restaurant",
       source: "sample",
     }) as PoiFeature,
   );

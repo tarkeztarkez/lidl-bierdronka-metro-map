@@ -1,11 +1,17 @@
-import type { ApiMetadata } from './types'
+import type { ApiMetadata, OverlayDisplayMode } from './types'
 
 interface ControlsProps {
   storeMinutes: number
   metroMinutes: number
+  milkbarMinutes: number
+  showMilkbars: boolean
   onStoreMinutesChange: (value: number) => void
   onMetroMinutesChange: (value: number) => void
+  onMilkbarMinutesChange: (value: number) => void
+  onShowMilkbarsChange: (value: boolean) => void
   metadata: ApiMetadata
+  overlayDisplayMode: OverlayDisplayMode
+  onOverlayDisplayModeChange: (value: OverlayDisplayMode) => void
   isMetadataLoading: boolean
   isOverlayLoading: boolean
   status: 'loading' | 'live' | 'demo' | 'error'
@@ -56,9 +62,15 @@ function SliderRow({
 export function Controls({
   storeMinutes,
   metroMinutes,
+  milkbarMinutes,
+  showMilkbars,
   onStoreMinutesChange,
   onMetroMinutesChange,
+  onMilkbarMinutesChange,
+  onShowMilkbarsChange,
   metadata,
+  overlayDisplayMode,
+  onOverlayDisplayModeChange,
   isMetadataLoading,
   isOverlayLoading,
   status,
@@ -80,10 +92,43 @@ export function Controls({
         value={metroMinutes}
         onChange={onMetroMinutesChange}
       />
+      {showMilkbars ? (
+        <SliderRow
+          label="Milkbar reach"
+          description="Walking time to the nearest milkbar."
+          value={milkbarMinutes}
+          onChange={onMilkbarMinutesChange}
+        />
+      ) : null}
+      <div className="toggle-card" role="group" aria-label="Milkbar layer">
+        <button
+          className={`toggle-button ${showMilkbars ? 'toggle-button-active' : ''}`}
+          type="button"
+          onClick={() => onShowMilkbarsChange(!showMilkbars)}
+        >
+          {showMilkbars ? 'Milkbars on' : 'Milkbars off'}
+        </button>
+      </div>
 
       <div className="controls-footer">
         <div className={`mode-chip mode-${status}`}>
           {isOverlayLoading ? 'Updating overlay' : status}
+        </div>
+        <div className="toggle-card" role="group" aria-label="Overlay display mode">
+          <button
+            className={`toggle-button ${overlayDisplayMode === 'full' ? 'toggle-button-active' : ''}`}
+            type="button"
+            onClick={() => onOverlayDisplayModeChange('full')}
+          >
+            Full layers
+          </button>
+          <button
+            className={`toggle-button ${overlayDisplayMode === 'intersection' ? 'toggle-button-active' : ''}`}
+            type="button"
+            onClick={() => onOverlayDisplayModeChange('intersection')}
+          >
+            Intersections only
+          </button>
         </div>
         <div className="metadata-list">
           <div>
@@ -104,6 +149,15 @@ export function Controls({
             <span>Metadata</span>
             <strong>{isMetadataLoading ? 'Loading' : metadata.source ?? 'API'}</strong>
           </div>
+          {showMilkbars ? (
+            <div>
+              <span>Milkbar range</span>
+              <strong>
+                {metadata.milkbarMinutesRange?.[0] ?? 1}-
+                {metadata.milkbarMinutesRange?.[1] ?? 30}
+              </strong>
+            </div>
+          ) : null}
         </div>
 
         <div className="message-stack" aria-live="polite">

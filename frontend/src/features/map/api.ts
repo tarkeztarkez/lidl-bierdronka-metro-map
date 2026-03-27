@@ -52,11 +52,15 @@ export async function fetchMetadata(signal?: AbortSignal) {
 export async function fetchOverlay(
   storeMinutes: number,
   metroMinutes: number,
+  milkbarMinutes: number,
+  showMilkbars: boolean,
   signal?: AbortSignal,
 ) {
   const params = new URLSearchParams({
     storeMinutes: `${storeMinutes}`,
     metroMinutes: `${metroMinutes}`,
+    milkbarMinutes: `${milkbarMinutes}`,
+    showMilkbars: `${showMilkbars}`,
   })
 
   return requestJson<OverlayResponse>(`/overlay?${params.toString()}`, signal)

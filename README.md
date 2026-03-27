@@ -67,6 +67,16 @@ bun run dev:frontend
 - frontend: `http://127.0.0.1:5173`
 - backend: `http://127.0.0.1:3001`
 
+## Deploy With Docker
+
+This deployment path uses the committed `data/raw/*.geojson` and `data/cache/*` files directly. It does not run `refresh:data` and does not require Valhalla. The Bun container serves both the API and the built frontend.
+
+```bash
+docker compose -f docker-compose.server.yml up --build -d
+```
+
+- app: `http://127.0.0.1:3001`
+
 ## API
 
 - `GET /api/health`

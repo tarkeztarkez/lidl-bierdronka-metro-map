@@ -9,16 +9,21 @@ import { MapView } from './features/map/MapView'
 import { sampleMetadata, sampleOverlay } from './features/map/sampleData'
 import type {
   ApiMetadata,
+  OverlayDisplayMode,
   OverlayResponse,
 } from './features/map/types'
 import './App.css'
 
 const DEFAULT_STORE_MINUTES = 12
 const DEFAULT_METRO_MINUTES = 10
+const DEFAULT_MILKBAR_MINUTES = 10
+const MIN_OVERLAY_LOADING_MS = 350
 
 function App() {
   const [storeMinutes, setStoreMinutes] = useState(DEFAULT_STORE_MINUTES)
   const [metroMinutes, setMetroMinutes] = useState(DEFAULT_METRO_MINUTES)
+  const [milkbarMinutes, setMilkbarMinutes] = useState(DEFAULT_MILKBAR_MINUTES)
+  const [showMilkbars, setShowMilkbars] = useState(false)
   const [metadata, setMetadata] = useState<ApiMetadata | null>(null)
   const [overlay, setOverlay] = useState<OverlayResponse | null>(null)
   const [isMetadataLoading, setIsMetadataLoading] = useState(true)
@@ -29,7 +34,15 @@ function App() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [metadataMessage, setMetadataMessage] = useState<string | null>(null)
   const [overlayMessage, setOverlayMessage] = useState<string | null>(null)
+  const [overlayDisplayMode, setOverlayDisplayMode] = useState<OverlayDisplayMode>('full')
   const latestMetadataRef = useRef<ApiMetadata | null>(null)
+
+  function beginOverlayRefresh() {
+    setIsOverlayLoading(true)
+    setErrorMessage(null)
+    setOverlayMessage(null)
+    setStatus('loading')
+  }
 
   useEffect(() => {
     latestMetadataRef.current = metadata
@@ -71,21 +84,20 @@ function App() {
   }, [])
 
   const requestedMinutes = useMemo(
-    () => ({ storeMinutes, metroMinutes }),
-    [storeMinutes, metroMinutes],
+    () => ({ storeMinutes, metroMinutes, milkbarMinutes, showMilkbars }),
+    [showMilkbars, storeMinutes, metroMinutes, milkbarMinutes],
   )
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
       const controller = new AbortController()
-      setIsOverlayLoading(true)
-      setErrorMessage(null)
-      setOverlayMessage(null)
-      setStatus('loading')
+      const startedAt = window.performance.now()
 
       fetchOverlay(
         requestedMinutes.storeMinutes,
         requestedMinutes.metroMinutes,
+        requestedMinutes.milkbarMinutes,
+        requestedMinutes.showMilkbars,
         controller.signal,
       )
         .then((response) => {
@@ -128,7 +140,14 @@ function App() {
           setErrorMessage('Backend unavailable. Using demo geometry.')
           setOverlayMessage('Backend unavailable. Using demo geometry.')
         })
-        .finally(() => {
+        .finally(async () => {
+          const elapsed = window.performance.now() - startedAt
+          const remaining = Math.max(0, MIN_OVERLAY_LOADING_MS - elapsed)
+
+          if (remaining > 0) {
+            await new Promise((resolve) => window.setTimeout(resolve, remaining))
+          }
+
           setIsOverlayLoading(false)
         })
     }, 240)
@@ -159,9 +178,27 @@ function App() {
         <Controls
           storeMinutes={storeMinutes}
           metroMinutes={metroMinutes}
-          onStoreMinutesChange={setStoreMinutes}
-          onMetroMinutesChange={setMetroMinutes}
+          milkbarMinutes={milkbarMinutes}
+          showMilkbars={showMilkbars}
+          onStoreMinutesChange={(value) => {
+            beginOverlayRefresh()
+            setStoreMinutes(value)
+          }}
+          onMetroMinutesChange={(value) => {
+            beginOverlayRefresh()
+            setMetroMinutes(value)
+          }}
+          onMilkbarMinutesChange={(value) => {
+            beginOverlayRefresh()
+            setMilkbarMinutes(value)
+          }}
+          onShowMilkbarsChange={(value) => {
+            beginOverlayRefresh()
+            setShowMilkbars(value)
+          }}
           metadata={activeMetadata}
+          overlayDisplayMode={overlayDisplayMode}
+          onOverlayDisplayModeChange={setOverlayDisplayMode}
           isMetadataLoading={isMetadataLoading}
           isOverlayLoading={isOverlayLoading}
           status={status}
@@ -184,11 +221,18 @@ function App() {
               <span className="status-label">Metro minutes</span>
               <strong className="status-value">{metroMinutes} min</strong>
             </div>
+            {showMilkbars ? (
+              <div>
+                <span className="status-label">Milkbar minutes</span>
+                <strong className="status-value">{milkbarMinutes} min</strong>
+              </div>
+            ) : null}
             <div>
               <span className="status-label">Sources</span>
               <strong className="status-value">
                 {activeMetadata.storeCount ?? '—'} stores /{' '}
                 {activeMetadata.metroCount ?? '—'} metro
+                {showMilkbars ? ` / ${activeMetadata.milkbarCount ?? '—'} milkbars` : ''}
               </strong>
             </div>
           </div>
@@ -209,6 +253,11 @@ function App() {
           featureCollection={featureCollection}
           metadata={activeMetadata}
           isLoading={isOverlayLoading}
+          overlayDisplayMode={overlayDisplayMode}
+          storeMinutes={storeMinutes}
+          metroMinutes={metroMinutes}
+          milkbarMinutes={milkbarMinutes}
+          showMilkbars={showMilkbars}
           status={status}
         />
       </main>
