@@ -4,11 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-35121250",
+        "id": "metro-1",
         "name": "Ratusz-Arsenał",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -22,11 +22,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-291414851",
+        "id": "metro-2",
         "name": "Marymont",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -40,11 +40,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-307389114",
+        "id": "metro-3",
         "name": "Stare Bielany",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -58,11 +58,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-307389115",
+        "id": "metro-4",
         "name": "Wawrzyszew",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -76,11 +76,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-307389116",
+        "id": "metro-5",
         "name": "Młociny",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -94,11 +94,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-1958108834",
+        "id": "metro-6",
         "name": "Słodowiec",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -112,11 +112,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390187815",
+        "id": "metro-7",
         "name": "Dworzec Wileński",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -130,11 +130,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390197100",
+        "id": "metro-8",
         "name": "Stadion Narodowy",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -148,11 +148,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390230685",
+        "id": "metro-9",
         "name": "Centrum Nauki Kopernik",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -166,11 +166,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390237898",
+        "id": "metro-10",
         "name": "Nowy Świat-Uniwersytet",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -184,11 +184,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390266492",
+        "id": "metro-11",
         "name": "Rondo ONZ",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -202,11 +202,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390267294",
+        "id": "metro-12",
         "name": "Rondo Daszyńskiego",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -220,11 +220,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390283399",
+        "id": "metro-13",
         "name": "Kabaty",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -238,11 +238,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390289961",
+        "id": "metro-14",
         "name": "Stokłosy",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -256,11 +256,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390290324",
+        "id": "metro-15",
         "name": "Natolin",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -274,11 +274,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390290598",
+        "id": "metro-16",
         "name": "Imielin",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -292,11 +292,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390304927",
+        "id": "metro-17",
         "name": "Ursynów",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -310,11 +310,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390306374",
+        "id": "metro-18",
         "name": "Służew",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -328,11 +328,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390327068",
+        "id": "metro-19",
         "name": "Racławicka",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -346,11 +346,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390333313",
+        "id": "metro-20",
         "name": "Wierzbno",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -364,11 +364,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390336021",
+        "id": "metro-21",
         "name": "Wilanowska",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -382,11 +382,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390342469",
+        "id": "metro-22",
         "name": "Pole Mokotowskie",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -400,11 +400,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390361095",
+        "id": "metro-23",
         "name": "Politechnika",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -418,11 +418,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3390365405",
+        "id": "metro-24",
         "name": "Centrum",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -436,11 +436,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3416840991",
+        "id": "metro-25",
         "name": "Dworzec Gdański",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -454,11 +454,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-3615569910",
+        "id": "metro-26",
         "name": "Plac Wilsona",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -472,11 +472,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-4930657482",
+        "id": "metro-27",
         "name": "Płocka",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -490,11 +490,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-4930657487",
+        "id": "metro-28",
         "name": "Trocka",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -508,11 +508,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-5117464830",
+        "id": "metro-29",
         "name": "Świętokrzyska",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -526,11 +526,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-5907821373",
+        "id": "metro-30",
         "name": "Księcia Janusza",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -544,11 +544,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-5907821374",
+        "id": "metro-31",
         "name": "Młynów",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -562,11 +562,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-6053348692",
+        "id": "metro-32",
         "name": "Szwedzka",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -580,11 +580,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-6564265270",
+        "id": "metro-33",
         "name": "Targówek Mieszkaniowy",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -598,11 +598,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-7362922676",
+        "id": "metro-34",
         "name": "Bemowo",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -616,11 +616,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-7362922677",
+        "id": "metro-35",
         "name": "Ulrychów",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -634,11 +634,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-10058224345",
+        "id": "metro-36",
         "name": "Bródno",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -652,11 +652,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-10058224348",
+        "id": "metro-37",
         "name": "Kondratowicza",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -670,11 +670,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "metro-10058224349",
+        "id": "metro-38",
         "name": "Zacisze",
         "category": "metro",
         "subtype": "subway",
-        "source": "overpass",
+        "source": "osm",
         "operator": "Metro Warszawskie"
       },
       "geometry": {
@@ -682,437 +682,6 @@
         "coordinates": [
           21.062148,
           52.2837496
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944536",
-        "name": "Ruda",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9760445,
-          52.28407
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944604",
-        "name": "Rydygiera",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9812923,
-          52.2603619
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944750",
-        "name": "Wilanów",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0845296,
-          52.1658054
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944882",
-        "name": "Plac Narutowicza",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9835565,
-          52.2188244
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944921",
-        "name": "Cmentarz Żydowski",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9777075,
-          52.2439392
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944922",
-        "name": "Okopowa",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9801501,
-          52.2373251
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944923",
-        "name": "Rondo Daszyńskiego",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9837067,
-          52.2310304
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944944",
-        "name": "Plac Zawiszy",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9881873,
-          52.2258643
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944945",
-        "name": "Bitwy Warszawskiej 1920 roku",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9759243,
-          52.2104027
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944946",
-        "name": "Wiślicka",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9767191,
-          52.2040927
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944947",
-        "name": "Żwirki i Wigury",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9811609,
-          52.1941861
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944948",
-        "name": "Służewiec",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          20.9876719,
-          52.1817314
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944949",
-        "name": "Rondo Unii Europejskiej",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0031433,
-          52.1782694
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944955",
-        "name": "Smoluchowskiego",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0111472,
-          52.1791432
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944977",
-        "name": "Wilanowska",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0227473,
-          52.1808322
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944978",
-        "name": "Dolina Służewiecka",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0442205,
-          52.175134
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944991",
-        "name": "Patkowskiego",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0545545,
-          52.1726949
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12176944992",
-        "name": "Sobieskiego",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0679697,
-          52.1697255
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12177923002",
-        "name": "Wiatraczna",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0848817,
-          52.2450201
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12177923035",
-        "name": "Gocław",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0924319,
-          52.2251177
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12177923095",
-        "name": "Dworzec Wschodni",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.05125,
-          52.2525501
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12177923096",
-        "name": "Mińska",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0741706,
-          52.2510589
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12177923097",
-        "name": "Ostrobramska",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0980797,
-          52.2355881
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "metro-12177923098",
-        "name": "Nowaka-Jeziorańskiego",
-        "category": "metro",
-        "subtype": "subway",
-        "source": "overpass",
-        "operator": "Metro Warszawskie"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.0955074,
-          52.2311395
         ]
       }
     }

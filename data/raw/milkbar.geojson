@@ -1,0 +1,532 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-1",
+        "name": "Bar Mleczny Familijny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0187357,
+          52.2341601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-2",
+        "name": "Bar Mleczny Biedronka",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9777857,
+          52.2119443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-3",
+        "name": "Bar mleczny Marymont",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9581159,
+          52.280928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-4",
+        "name": "Bar Mleczny \"Sady\"",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9712388,
+          52.2649789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-5",
+        "name": "Bar Gdański",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9975646,
+          52.2525724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-6",
+        "name": "Bar Mleczny „Wilanowski”",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0358659,
+          52.2020418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-7",
+        "name": "Marszałkowski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0148725,
+          52.2237223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-8",
+        "name": "Bar Mleczny Prasowy",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0205925,
+          52.2157962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-9",
+        "name": "Mirowski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9943507,
+          52.2417764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-10",
+        "name": "Wegetariański Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0186892,
+          52.2315255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-11",
+        "name": "Bar mleczny Kuchnia",
+        "category": "milkbar",
+        "subtype": "restaurant",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9614873,
+          52.2458432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-12",
+        "name": "Bar mleczny Kuchnia za ścianą",
+        "category": "milkbar",
+        "subtype": "restaurant",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.028464,
+          52.2597319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-13",
+        "name": "Warszawski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.023562,
+          52.198921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-14",
+        "name": "Dziki Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9881816,
+          52.2530117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-15",
+        "name": "Wilanowski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0739569,
+          52.1606853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-16",
+        "name": "Bar mleczny Łycha",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9269604,
+          52.3990324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-17",
+        "name": "Bar Mleczny Nałęczowski",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0636984,
+          52.1759375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-18",
+        "name": "Ursynowski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0279898,
+          52.1603025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-19",
+        "name": "Bar mleczny Czarny-Biały",
+        "category": "milkbar",
+        "subtype": "restaurant",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9319372,
+          52.2217862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-20",
+        "name": "Bar mleczny Bunia",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9329086,
+          52.2410354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-21",
+        "name": "Bar Mleczny Grażyny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0227375,
+          52.2040114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-22",
+        "name": "Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9409399,
+          52.2345358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-23",
+        "name": "Polny Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.015007,
+          52.2185959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-24",
+        "name": "Bar Mleczny Prasowy",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0287766,
+          52.2393354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-25",
+        "name": "Bar Mleczny „Miły”",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0524013,
+          52.2375064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-26",
+        "name": "Bródnowski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0472894,
+          52.2915082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-27",
+        "name": "Bar Mleczny Codzienny",
+        "category": "milkbar",
+        "subtype": "milkbar",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9730995,
+          52.2061447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-28",
+        "name": "Bar Mleczny Kubek",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9889334,
+          52.1897684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-29",
+        "name": "Żoliborski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "restaurant",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9726592,
+          52.2596133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-30",
+        "name": "Gocławski Bar Mleczny",
+        "category": "milkbar",
+        "subtype": "restaurant",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0931484,
+          52.2272402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "milkbar-31",
+        "name": "Bar mleczny \"Kuchnia za ścianą\"",
+        "category": "milkbar",
+        "subtype": "fast_food",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0576041,
+          52.1457315
+        ]
+      }
+    }
+  ]
+}
