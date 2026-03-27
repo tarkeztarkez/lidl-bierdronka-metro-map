@@ -1,0 +1,107 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-metro-1",
+        "name": "Centrum",
+        "category": "metro",
+        "subtype": "station",
+        "source": "sample"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.009,
+          52.229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-metro-2",
+        "name": "Nowy Świat-Uniwersytet",
+        "category": "metro",
+        "subtype": "station",
+        "source": "sample"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.018,
+          52.236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-metro-3",
+        "name": "Ratusz Arsenał",
+        "category": "metro",
+        "subtype": "station",
+        "source": "sample"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.015,
+          52.247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-metro-4",
+        "name": "Politechnika",
+        "category": "metro",
+        "subtype": "station",
+        "source": "sample"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.993,
+          52.223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-metro-5",
+        "name": "Dworzec Wileński",
+        "category": "metro",
+        "subtype": "station",
+        "source": "sample"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.048,
+          52.229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-metro-6",
+        "name": "Szwedzka",
+        "category": "metro",
+        "subtype": "station",
+        "source": "sample"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.067,
+          52.245
+        ]
+      }
+    }
+  ]
+}

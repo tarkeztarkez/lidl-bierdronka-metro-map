@@ -1,0 +1,15 @@
+services:
+  valhalla:
+    image: ghcr.io/gis-ops/docker-valhalla/valhalla:latest
+    container_name: warsaw-valhalla
+    ports:
+      - "8002:8002"
+    environment:
+      serve_tiles: "True"
+      use_default_speeds_config: "True"
+    volumes:
+      - valhalla_tiles:/custom_files
+    restart: unless-stopped
+
+volumes:
+  valhalla_tiles:

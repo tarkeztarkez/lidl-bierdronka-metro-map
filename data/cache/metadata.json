@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-03-27T13:51:20.998Z",
+  "source": "refresh",
+  "supportedMinutes": {
+    "min": 1,
+    "max": 30
+  },
+  "counts": {
+    "stores": 6,
+    "metros": 6
+  },
+  "layers": {
+    "store": {
+      "category": "store",
+      "poiCount": 6,
+      "minuteRange": {
+        "min": 1,
+        "max": 30
+      },
+      "minutesAvailable": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "updatedAt": "2026-03-27T13:51:20.998Z",
+      "source": "valhalla-or-fallback"
+    },
+    "metro": {
+      "category": "metro",
+      "poiCount": 6,
+      "minuteRange": {
+        "min": 1,
+        "max": 30
+      },
+      "minutesAvailable": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "updatedAt": "2026-03-27T13:51:20.998Z",
+      "source": "valhalla-or-fallback"
+    }
+  },
+  "bbox": {
+    "minLon": 20.8,
+    "minLat": 52.05,
+    "maxLon": 21.32,
+    "maxLat": 52.4
+  }
+}

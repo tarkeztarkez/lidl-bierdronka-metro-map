@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-store-1",
+        "name": "Lidl Śródmieście",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "sample",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0122,
+          52.2297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-store-2",
+        "name": "Biedronka Powiśle",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "sample",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0225,
+          52.235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-store-3",
+        "name": "Lidl Wola",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "sample",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.035,
+          52.241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-store-4",
+        "name": "Biedronka Ochota",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "sample",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.99,
+          52.24
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-store-5",
+        "name": "Lidl Praga",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "sample",
+        "brand": "Lidl"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.06,
+          52.215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sample-store-6",
+        "name": "Biedronka Targówek",
+        "category": "store",
+        "subtype": "supermarket",
+        "source": "sample",
+        "brand": "Biedronka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.085,
+          52.23
+        ]
+      }
+    }
+  ]
+}

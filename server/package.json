@@ -1,0 +1,19 @@
+{
+  "name": "lidl-bierdronka-metro-map-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "refresh:data": "bun run src/refresh.ts",
+    "typecheck": "bunx tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.3.4",
+    "hono": "^4.12.9",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  }
+}
