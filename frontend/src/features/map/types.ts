@@ -37,9 +37,55 @@ export interface GeoJsonFeatureCollection {
 export interface SourcePoint {
   id?: string
   name: string
+  letter?: string
   kind: 'store' | 'metro' | 'milkbar'
   position: Position
   note?: string
+}
+
+export interface RouteOrigin {
+  lat: number
+  lng: number
+}
+
+export type RouteMode = 'walking' | 'bicycling' | 'transit'
+export type TransitSegmentIcon = 'bus' | 'tram' | 'metro' | 'train'
+
+export interface TransitAgency {
+  name: string
+  url?: string
+}
+
+export interface TransitSegment {
+  icon: TransitSegmentIcon
+  lineLabel: string
+  headsign?: string
+  agency?: TransitAgency
+}
+
+export interface RouteModeResult {
+  mode: RouteMode
+  status: 'ok' | 'unavailable'
+  durationText?: string
+  durationSeconds?: number
+  routePolyline?: string
+  transitSegments?: TransitSegment[]
+  agencies?: TransitAgency[]
+  warnings?: string[]
+  errorMessage?: string
+}
+
+export interface RoutePlaceResult {
+  placeId: string
+  placeName: string
+  modes: Record<RouteMode, RouteModeResult>
+}
+
+export interface RoutesResponse {
+  origin: RouteOrigin
+  departureTime: string
+  places: SourcePoint[]
+  results: RoutePlaceResult[]
 }
 
 export interface ApiMetadata {
@@ -75,4 +121,9 @@ export interface LiveResponse {
   demo?: boolean
 }
 
-export type OverlayDisplayMode = 'full' | 'intersection'
+export interface LayerVisibility {
+  store: boolean
+  metro: boolean
+  intersection: boolean
+  milkbar: boolean
+}

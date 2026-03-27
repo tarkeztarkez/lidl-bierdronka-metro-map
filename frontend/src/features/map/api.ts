@@ -3,6 +3,8 @@ import type {
   GeoJsonFeatureCollection,
   LiveResponse,
   OverlayResponse,
+  RouteOrigin,
+  RoutesResponse,
 } from './types'
 import { sampleMetadata } from './sampleData'
 
@@ -64,6 +66,20 @@ export async function fetchOverlay(
   })
 
   return requestJson<OverlayResponse>(`/overlay?${params.toString()}`, signal)
+}
+
+export async function fetchRoutes(
+  origin: RouteOrigin,
+  departureTime: string,
+  signal?: AbortSignal,
+) {
+  const params = new URLSearchParams({
+    originLat: `${origin.lat}`,
+    originLng: `${origin.lng}`,
+    departureTime,
+  })
+
+  return requestJson<RoutesResponse>(`/routes?${params.toString()}`, signal)
 }
 
 export function isFeatureCollection(

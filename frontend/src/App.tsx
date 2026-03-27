@@ -3,14 +3,18 @@ import { Controls } from './features/map/Controls'
 import {
   fetchMetadata,
   fetchOverlay,
+  fetchRoutes,
   isFeatureCollection,
 } from './features/map/api'
 import { MapView } from './features/map/MapView'
+import { HIGHLIGHT_POINTS } from './features/map/highlightPoints'
 import { sampleMetadata, sampleOverlay } from './features/map/sampleData'
 import type {
   ApiMetadata,
-  OverlayDisplayMode,
+  LayerVisibility,
   OverlayResponse,
+  RouteOrigin,
+  RoutesResponse,
 } from './features/map/types'
 import './App.css'
 
@@ -18,30 +22,53 @@ const DEFAULT_STORE_MINUTES = 12
 const DEFAULT_METRO_MINUTES = 10
 const DEFAULT_MILKBAR_MINUTES = 10
 const MIN_OVERLAY_LOADING_MS = 350
+const DEFAULT_LAYER_VISIBILITY: LayerVisibility = {
+  store: true,
+  metro: true,
+  intersection: true,
+  milkbar: true,
+}
+
+function defaultRouteDateTime() {
+  const value = new Date()
+  value.setDate(value.getDate() + 1)
+  value.setHours(12, 0, 0, 0)
+
+  return {
+    date: value.toISOString().slice(0, 10),
+    time: '12:00',
+  }
+}
+
+function combineLocalDateTime(date: string, time: string) {
+  return `${date}T${time}`
+}
 
 function App() {
+  const initialRouteDateTime = useMemo(() => defaultRouteDateTime(), [])
   const [storeMinutes, setStoreMinutes] = useState(DEFAULT_STORE_MINUTES)
   const [metroMinutes, setMetroMinutes] = useState(DEFAULT_METRO_MINUTES)
   const [milkbarMinutes, setMilkbarMinutes] = useState(DEFAULT_MILKBAR_MINUTES)
   const [showMilkbars, setShowMilkbars] = useState(false)
   const [metadata, setMetadata] = useState<ApiMetadata | null>(null)
   const [overlay, setOverlay] = useState<OverlayResponse | null>(null)
-  const [isMetadataLoading, setIsMetadataLoading] = useState(true)
   const [isOverlayLoading, setIsOverlayLoading] = useState(true)
-  const [status, setStatus] = useState<'loading' | 'live' | 'demo' | 'error'>(
-    'loading',
-  )
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [metadataMessage, setMetadataMessage] = useState<string | null>(null)
   const [overlayMessage, setOverlayMessage] = useState<string | null>(null)
-  const [overlayDisplayMode, setOverlayDisplayMode] = useState<OverlayDisplayMode>('full')
+  const [layerVisibility, setLayerVisibility] = useState<LayerVisibility>(DEFAULT_LAYER_VISIBILITY)
+  const [routeOrigin, setRouteOrigin] = useState<RouteOrigin | null>(null)
+  const [routeDate, setRouteDate] = useState(initialRouteDateTime.date)
+  const [routeTime, setRouteTime] = useState(initialRouteDateTime.time)
+  const [routes, setRoutes] = useState<RoutesResponse | null>(null)
+  const [isRoutesLoading, setIsRoutesLoading] = useState(false)
+  const [routeMessage, setRouteMessage] = useState<string | null>(null)
   const latestMetadataRef = useRef<ApiMetadata | null>(null)
 
   function beginOverlayRefresh() {
     setIsOverlayLoading(true)
     setErrorMessage(null)
     setOverlayMessage(null)
-    setStatus('loading')
   }
 
   useEffect(() => {
@@ -74,7 +101,6 @@ function App() {
           return
         }
 
-        setIsMetadataLoading(false)
       })
 
     return () => {
@@ -115,7 +141,6 @@ function App() {
               demo: response.demo ?? false,
               message: response.message ?? undefined,
             })
-            setStatus(response.demo ? 'demo' : 'live')
             setOverlayMessage(response.message ?? null)
             return
           }
@@ -126,7 +151,6 @@ function App() {
             demo: true,
             message: 'Backend returned no overlay yet. Using demo geometry.',
           })
-          setStatus('demo')
           setOverlayMessage('Backend returned no overlay yet. Using demo geometry.')
         })
         .catch(() => {
@@ -136,7 +160,6 @@ function App() {
             demo: true,
             message: 'Backend unavailable. Using demo geometry.',
           })
-          setStatus('demo')
           setErrorMessage('Backend unavailable. Using demo geometry.')
           setOverlayMessage('Backend unavailable. Using demo geometry.')
         })
@@ -157,22 +180,97 @@ function App() {
     }
   }, [requestedMinutes])
 
+  const selectedDepartureTime = useMemo(
+    () => combineLocalDateTime(routeDate, routeTime),
+    [routeDate, routeTime],
+  )
+
+  useEffect(() => {
+    if (!routeOrigin) {
+      setRoutes(null)
+      setIsRoutesLoading(false)
+      return
+    }
+
+    const controller = new AbortController()
+    let ignore = false
+
+    setIsRoutesLoading(true)
+    setRouteMessage(null)
+
+    fetchRoutes(routeOrigin, selectedDepartureTime, controller.signal)
+      .then((response) => {
+        if (ignore) {
+          return
+        }
+
+        setRoutes(response)
+        setRouteMessage(null)
+      })
+      .catch(() => {
+        if (ignore) {
+          return
+        }
+
+        setRoutes({
+          origin: routeOrigin,
+          departureTime: selectedDepartureTime,
+          places: HIGHLIGHT_POINTS,
+          results: HIGHLIGHT_POINTS.map((place) => ({
+            placeId: place.id ?? place.name,
+            placeName: place.name,
+            modes: {
+              walking: {
+                mode: 'walking',
+                status: 'unavailable',
+                errorMessage: 'Route lookup failed.',
+              },
+              bicycling: {
+                mode: 'bicycling',
+                status: 'unavailable',
+                errorMessage: 'Route lookup failed.',
+              },
+              transit: {
+                mode: 'transit',
+                status: 'unavailable',
+                errorMessage: 'Route lookup failed.',
+              },
+            },
+          })),
+        })
+        setRouteMessage('Route lookup unavailable. Check the backend and GOOGLE_MAPS_KEY.')
+      })
+      .finally(() => {
+        if (ignore) {
+          return
+        }
+
+        setIsRoutesLoading(false)
+      })
+
+    return () => {
+      ignore = true
+      controller.abort()
+    }
+  }, [routeOrigin, selectedDepartureTime])
+
   const featureCollection =
     overlay?.featureCollection ?? overlay?.geojson ?? overlay?.overlay ?? sampleOverlay
 
   const activeMetadata = metadata ?? overlay?.metadata ?? sampleMetadata
 
+  function clearRouteSelection() {
+    setRouteOrigin(null)
+    setRoutes(null)
+    setRouteMessage(null)
+    setIsRoutesLoading(false)
+  }
+
   return (
     <div className="app-shell">
       <aside className="control-rail">
-        <div className="brand-block">
-          <p className="eyebrow">Warsaw access diagram</p>
-          <h1>Lidl, Biedronka, Metro</h1>
-          <p className="lede">
-            Highlight the overlap between walking reach for grocery stops and metro
-            stations. The backend can swap in real OSM and Valhalla data without
-            changing the UI contract.
-          </p>
+        <div className="brand-block brand-block-compact">
+          <h1>Warsaw Access Map</h1>
         </div>
 
         <Controls
@@ -196,56 +294,18 @@ function App() {
             beginOverlayRefresh()
             setShowMilkbars(value)
           }}
-          metadata={activeMetadata}
-          overlayDisplayMode={overlayDisplayMode}
-          onOverlayDisplayModeChange={setOverlayDisplayMode}
-          isMetadataLoading={isMetadataLoading}
-          isOverlayLoading={isOverlayLoading}
-          status={status}
+          layerVisibility={layerVisibility}
+          onLayerVisibilityChange={setLayerVisibility}
           errorMessage={errorMessage}
           metadataMessage={metadataMessage}
           overlayMessage={overlayMessage}
+          routeDate={routeDate}
+          routeTime={routeTime}
+          onRouteDateChange={setRouteDate}
+          onRouteTimeChange={setRouteTime}
+          isRoutesLoading={isRoutesLoading}
+          routeMessage={routeMessage}
         />
-
-        <section className="status-card">
-          <div className="status-grid">
-            <div>
-              <span className="status-label">Overlay state</span>
-              <strong className="status-value">{status.toUpperCase()}</strong>
-            </div>
-            <div>
-              <span className="status-label">Store minutes</span>
-              <strong className="status-value">{storeMinutes} min</strong>
-            </div>
-            <div>
-              <span className="status-label">Metro minutes</span>
-              <strong className="status-value">{metroMinutes} min</strong>
-            </div>
-            {showMilkbars ? (
-              <div>
-                <span className="status-label">Milkbar minutes</span>
-                <strong className="status-value">{milkbarMinutes} min</strong>
-              </div>
-            ) : null}
-            <div>
-              <span className="status-label">Sources</span>
-              <strong className="status-value">
-                {activeMetadata.storeCount ?? '—'} stores /{' '}
-                {activeMetadata.metroCount ?? '—'} metro
-                {showMilkbars ? ` / ${activeMetadata.milkbarCount ?? '—'} milkbars` : ''}
-              </strong>
-            </div>
-          </div>
-
-          <div className="status-note">
-            <span className="status-label">Refresh</span>
-            <p>
-              {activeMetadata.refreshedAt
-                ? `Last rebuild ${new Date(activeMetadata.refreshedAt).toLocaleString()}`
-                : 'Waiting for cached overlay metadata from the backend.'}
-            </p>
-          </div>
-        </section>
       </aside>
 
       <main className="map-stage">
@@ -253,11 +313,16 @@ function App() {
           featureCollection={featureCollection}
           metadata={activeMetadata}
           isLoading={isOverlayLoading}
-          overlayDisplayMode={overlayDisplayMode}
+          layerVisibility={layerVisibility}
           storeMinutes={storeMinutes}
           metroMinutes={metroMinutes}
           milkbarMinutes={milkbarMinutes}
           showMilkbars={showMilkbars}
+          routeOrigin={routeOrigin}
+          onRouteOriginChange={setRouteOrigin}
+          onRouteOriginClear={clearRouteSelection}
+          routes={routes}
+          isRoutesLoading={isRoutesLoading}
         />
       </main>
     </div>

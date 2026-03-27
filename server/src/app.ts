@@ -8,6 +8,7 @@ import { repoRoot } from "./lib/paths";
 import { healthRoute } from "./routes/health";
 import { metadataRoute } from "./routes/metadata";
 import { overlayRoute } from "./routes/overlay";
+import { routesRoute } from "./routes/routes";
 
 export const app = new Hono();
 const frontendDistDir = resolve(repoRoot, "frontend", "dist");
@@ -34,6 +35,7 @@ app.use("*", cors());
 app.route("/api/health", healthRoute);
 app.route("/api/metadata", metadataRoute);
 app.route("/api/overlay", overlayRoute);
+app.route("/api/routes", routesRoute);
 
 app.get("/healthz", (c) =>
   c.json({
@@ -45,7 +47,7 @@ app.get("*", async (c) => {
   if (!existsSync(frontendIndexPath)) {
     return c.json({
       service: "lidl-bierdronka-metro-map",
-      routes: ["/api/health", "/api/metadata", "/api/overlay"],
+      routes: ["/api/health", "/api/metadata", "/api/overlay", "/api/routes"],
     });
   }
 
