@@ -8,6 +8,7 @@ export const metadataRoute = new Hono().get("/", async (c) => {
     loadNormalizedPoints("store"),
     loadNormalizedPoints("metro"),
   ]);
+  const usingFallback = runtime.source !== "refresh";
 
   return c.json({
     metadata: {
@@ -18,7 +19,9 @@ export const metadataRoute = new Hono().get("/", async (c) => {
       metroMinutesRange: [runtime.supportedMinutes.min, runtime.supportedMinutes.max],
       bounds: [runtime.bbox.minLon, runtime.bbox.minLat, runtime.bbox.maxLon, runtime.bbox.maxLat],
       source: runtime.source,
-      note: runtime.cacheReady ? "Cached overlay data ready." : "Using bundled Warsaw sample data until refresh runs.",
+      note: usingFallback
+        ? "Using bundled sample POIs because live OSM refresh did not complete successfully."
+        : "Cached overlay data ready.",
       storePoints: storePoints.map((feature) => ({
         id: feature.properties.id,
         name: feature.properties.name,
@@ -32,7 +35,7 @@ export const metadataRoute = new Hono().get("/", async (c) => {
         position: feature.geometry.coordinates,
       })),
     },
-    message: runtime.cacheReady ? undefined : "Refresh data to replace the bundled sample geometry.",
-    demo: !runtime.cacheReady,
+    message: usingFallback ? "Live OSM data is not loaded yet. Current counts come from bundled sample data." : undefined,
+    demo: usingFallback,
   });
 });

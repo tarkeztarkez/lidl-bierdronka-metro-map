@@ -31,6 +31,7 @@ export const overlayRoute = new Hono().get("/", async (c) => {
     loadNormalizedPoints("store"),
     loadNormalizedPoints("metro"),
   ]);
+  const usingFallback = overlay.metadata.source !== "refresh";
 
   return c.json({
     featureCollection: {
@@ -50,7 +51,11 @@ export const overlayRoute = new Hono().get("/", async (c) => {
         overlay.metadata.bbox.maxLat,
       ],
       source: overlay.metadata.source,
-      note: overlay.intersection ? undefined : "No overlap for the selected minute pair.",
+      note: usingFallback
+        ? "Overlay is currently based on bundled sample POIs, not live Warsaw OSM data."
+        : overlay.intersection
+          ? undefined
+          : "No overlap for the selected minute pair.",
       storePoints: storePoints.map((feature) => ({
         id: feature.properties.id,
         name: feature.properties.name,
@@ -64,7 +69,11 @@ export const overlayRoute = new Hono().get("/", async (c) => {
         position: feature.geometry.coordinates,
       })),
     },
-    demo: overlay.metadata.source !== "refresh",
-    message: overlay.intersection ? undefined : "No overlap for the selected minute pair.",
+    demo: usingFallback,
+    message: usingFallback
+      ? "Live OSM refresh fell back to bundled sample data."
+      : overlay.intersection
+        ? undefined
+        : "No overlap for the selected minute pair.",
   });
 });

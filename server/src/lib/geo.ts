@@ -36,7 +36,26 @@ export function mergePolygons(features: Array<Feature<Polygon | MultiPolygon>>):
     return clean[0] ?? null;
   }
 
-  return union(featureCollection(clean)) as Feature<Polygon | MultiPolygon> | null;
+  try {
+    return union(featureCollection(clean)) as Feature<Polygon | MultiPolygon> | null;
+  } catch {
+    let current = clean[0] ?? null;
+
+    for (const next of clean.slice(1)) {
+      if (!current) {
+        current = next;
+        continue;
+      }
+
+      try {
+        current = union(featureCollection([current, next])) as Feature<Polygon | MultiPolygon> | null;
+      } catch {
+        continue;
+      }
+    }
+
+    return current;
+  }
 }
 
 export function intersectPolygons(

@@ -1,13 +1,16 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-import { featureCollection } from "@turf/turf";
 import type { Feature, FeatureCollection, MultiPolygon, Polygon } from "geojson";
 
 import { cacheDir, ensureProjectDirs, rawDataDir } from "../lib/paths";
-import { intersectPolygons, makeFallbackLayer, mergePolygons } from "../lib/geo";
+import { intersectPolygons, makeFallbackLayer } from "../lib/geo";
 import type { CacheMetadata, IsochroneFeature, LayerMetadata, MetadataResponse, PoiCategory, PoiFeature } from "../lib/types";
+import { mapLimit } from "../lib/parallel";
+import { getRefreshConcurrency } from "../lib/refresh-config";
 import { sampleMetros, sampleStores } from "./sample-data";
+import { requestIsochrones } from "./valhalla";
+import { runUnionWorkerPool } from "./union-worker-pool";
 
 const metadataPath = join(cacheDir, "metadata.json");
 
@@ -30,6 +33,12 @@ async function writeJson(filePath: string, value: unknown): Promise<void> {
 
 function minuteRange(): number[] {
   return Array.from({ length: 30 }, (_, index) => index + 1);
+}
+
+function usedSampleFallback(
+  points: Array<{ properties: { source?: string } }>,
+): boolean {
+  return points.some((point) => point.properties.source === "sample");
 }
 
 export async function loadNormalizedPoints(category: PoiCategory): Promise<PoiFeature[]> {
@@ -60,27 +69,64 @@ export async function buildAndPersistLayers(
   category: PoiCategory,
   points: PoiFeature[],
   minutesRange: number[],
-  createIsochrone: (point: PoiFeature, minutes: number) => Promise<IsochroneFeature>,
 ): Promise<LayerMetadata> {
   await ensureProjectDirs();
 
-  const minuteOutputs: number[] = [];
-  for (const minutes of minutesRange) {
-    const isochrones = await Promise.all(points.map((point) => createIsochrone(point, minutes)));
-    const merged = mergePolygons(isochrones as Array<Feature<Polygon | MultiPolygon>>);
-    const layer = merged ?? makeFallbackLayer(
-      points.map((point) => point.geometry.coordinates as [number, number]),
-      minutes,
-      (index) => ({
-        poiId: points[index]?.properties.id,
-        poiName: points[index]?.properties.name,
-        category,
-        minutes,
-        source: "fallback",
-      }),
-    );
+  if (points.length === 0) {
+    return {
+      category,
+      poiCount: 0,
+      minuteRange: {
+        min: minutesRange[0] ?? 1,
+        max: minutesRange[minutesRange.length - 1] ?? 30,
+      },
+      minutesAvailable: [],
+      updatedAt: new Date().toISOString(),
+      source: "empty",
+    };
+  }
 
-    if (layer) {
+  const sortedMinutes = [...minutesRange].sort((left, right) => left - right);
+  const refreshConcurrency = getRefreshConcurrency();
+  const perPointIsochrones = await mapLimit(
+    points,
+    refreshConcurrency,
+    (point) => requestIsochrones(point, sortedMinutes),
+  );
+  const pointCenters = points.map((point) => point.geometry.coordinates as [number, number]);
+  const layerTasks = sortedMinutes.map((minutes, minuteIndex) => ({
+    category,
+    minutes,
+    centers: pointCenters,
+    isochrones: perPointIsochrones
+      .map((isochrones) => isochrones[minuteIndex])
+      .filter((feature): feature is IsochroneFeature => Boolean(feature)) as Array<
+        Feature<Polygon | MultiPolygon>
+      >,
+  }));
+  const mergedLayers = await runUnionWorkerPool(layerTasks);
+
+  const minuteOutputs: number[] = [];
+  const layers = await mapLimit(
+    sortedMinutes,
+    refreshConcurrency,
+    async (minutes, minuteIndex) => {
+      const layer = mergedLayers[minuteIndex] ?? makeFallbackLayer(
+        pointCenters,
+        minutes,
+        (index) => ({
+          poiId: points[index]?.properties.id,
+          poiName: points[index]?.properties.name,
+          category,
+          minutes,
+          source: "fallback",
+        }),
+      );
+
+      if (!layer) {
+        return null;
+      }
+
       await writeJson(layerPath(category, minutes), {
         ...layer,
         properties: {
@@ -89,6 +135,13 @@ export async function buildAndPersistLayers(
           poiCount: points.length,
         },
       });
+
+      return minutes;
+    },
+  );
+
+  for (const minutes of layers) {
+    if (typeof minutes === "number") {
       minuteOutputs.push(minutes);
     }
   }
@@ -110,17 +163,15 @@ export async function refreshCache(): Promise<CacheMetadata> {
   await ensureProjectDirs();
   const [stores, metros] = await Promise.all([loadNormalizedPoints("store"), loadNormalizedPoints("metro")]);
 
-  const storeLayers = await buildAndPersistLayers("store", stores, minuteRange(), async (point, minutes) =>
-    (await import("./valhalla")).requestIsochrone(point, minutes),
-  );
-  const metroLayers = await buildAndPersistLayers("metro", metros, minuteRange(), async (point, minutes) =>
-    (await import("./valhalla")).requestIsochrone(point, minutes),
-  );
+  const storeLayers = await buildAndPersistLayers("store", stores, minuteRange());
+  const metroLayers = await buildAndPersistLayers("metro", metros, minuteRange());
 
   const generatedAt = new Date().toISOString();
   const metadata: CacheMetadata = {
     generatedAt,
-    source: "refresh",
+    source: usedSampleFallback(stores) || usedSampleFallback(metros)
+      ? "refresh-fallback-sample"
+      : "refresh",
     supportedMinutes: {
       min: 1,
       max: 30,

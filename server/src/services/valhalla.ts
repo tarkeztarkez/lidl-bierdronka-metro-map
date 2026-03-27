@@ -12,7 +12,19 @@ function valhallaPoint(feature: PoiFeature): [number, number] {
 }
 
 export async function requestIsochrone(poi: PoiFeature, minutes: number): Promise<IsochroneFeature> {
+  const [feature] = await requestIsochrones(poi, [minutes]);
+  if (!feature) {
+    throw new Error(`No isochrone generated for ${poi.properties.id} at ${minutes} minutes`);
+  }
+  return feature;
+}
+
+export async function requestIsochrones(
+  poi: PoiFeature,
+  minutesRange: number[],
+): Promise<IsochroneFeature[]> {
   const [longitude, latitude] = valhallaPoint(poi);
+  const sortedMinutes = [...minutesRange].sort((left, right) => left - right);
 
   try {
     const response = await fetch(`${valhallaBaseUrl()}/isochrone`, {
@@ -23,7 +35,7 @@ export async function requestIsochrone(poi: PoiFeature, minutes: number): Promis
       body: JSON.stringify({
         locations: [{ lat: latitude, lon: longitude }],
         costing: "pedestrian",
-        contours: [{ time: minutes }],
+        contours: sortedMinutes.map((minutes) => ({ time: minutes })),
         polygons: true,
       }),
     });
@@ -33,29 +45,33 @@ export async function requestIsochrone(poi: PoiFeature, minutes: number): Promis
     }
 
     const payload = (await response.json()) as { features?: IsochroneFeature[] };
-    const feature = payload.features?.[0];
-    if (!feature) {
+    const features = payload.features ?? [];
+    if (features.length !== sortedMinutes.length) {
       throw new Error("Valhalla returned no feature");
     }
 
     const category = poi.properties.category === "metro" ? "metro" : "store";
 
-    feature.properties = {
-      poiId: poi.properties.id,
-      poiName: poi.properties.name,
-      category,
-      minutes,
-      source: "valhalla",
-    } as IsochroneFeature["properties"];
+    return features.map((feature, index) => {
+      feature.properties = {
+        poiId: poi.properties.id,
+        poiName: poi.properties.name,
+        category,
+        minutes: sortedMinutes[index] ?? sortedMinutes[0] ?? 1,
+        source: "valhalla",
+      } as IsochroneFeature["properties"];
 
-    return feature;
-  } catch {
-    return makeApproxIsochrone(longitude, latitude, minutes, {
-      poiId: poi.properties.id,
-      poiName: poi.properties.name,
-      category: poi.properties.category,
-      minutes,
-      source: "fallback",
+      return feature;
     });
+  } catch {
+    return sortedMinutes.map((minutes) =>
+      makeApproxIsochrone(longitude, latitude, minutes, {
+        poiId: poi.properties.id,
+        poiName: poi.properties.name,
+        category: poi.properties.category,
+        minutes,
+        source: "fallback",
+      }),
+    );
   }
 }

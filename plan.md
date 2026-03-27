@@ -27,6 +27,7 @@ Success is observable when:
 - [x] (2026-03-27 13:54Z) Implemented metadata, health, and overlay API endpoints, including frontend-friendly metadata for bounds and source points.
 - [x] (2026-03-27 13:56Z) Implemented the map-first frontend with sliders, legend, status cards, demo fallback behavior, and Leaflet overlay rendering.
 - [x] (2026-03-27 13:57Z) Validated backend typecheck, frontend build/lint, live API smoke tests on port 3011, and documented setup/refresh/run steps in `README.md`.
+- [x] (2026-03-27 15:48Z) Optimized refresh with batched Valhalla contours, configurable concurrency, worker-based minute unions, and multi-endpoint Overpass failover; verified live cache generation with `100` store POIs and `62` metro POIs.
 
 ## Surprises & Discoveries
 
@@ -38,6 +39,10 @@ Success is observable when:
   Evidence: Starting `server/src/index.ts` on the default port returned `EADDRINUSE`, while `PORT=3011 bun run src/index.ts` started successfully and served the expected API responses.
 - Observation: Root repo scripts could not rely on `bun --cwd ... run ...` inside `package.json`; changing them to `cd <dir> && bun run ...` made the contract work reliably.
   Evidence: Initial `bun run build:server` and related root scripts printed Bun CLI usage instead of running the intended package scripts.
+- Observation: The original store Overpass query was too broad and unstable on the default endpoint, producing `429` and `504` responses and forcing sample fallback.
+  Evidence: Manual POSTs to `https://overpass-api.de/api/interpreter` returned rate-limit and gateway-timeout failures for the broad grocery query, while narrower brand/name-specific queries and endpoint failover produced live OSM store data.
+- Observation: The heavy refresh bottleneck moved from request count to geometry union work once Valhalla requests were batched.
+  Evidence: After batching contours per POI, the live refresh stayed CPU-bound with high parallel usage during layer construction, and completed successfully only after worker-based union handling was added and hardened.
 
 ## Decision Log
 
@@ -67,6 +72,8 @@ The repo now contains a working Warsaw accessibility map app with a Bun/Hono bac
 What was cut: no apartment search interaction, no district picker, no automatic background refresh, and no deduplication or station-grouping sophistication beyond the current normalization path. The metro/stores lists can therefore be denser than ideal when raw OSM data contains many entrances.
 
 What still feels fragile: full refreshes can take time because the isochrone build fans out across many minute thresholds, and development environments may already have something bound to port `3001`. The UI is resilient because it supports demo fallback data, but production-hardening would need stricter POI deduplication and better operational handling around refresh jobs.
+
+The refresh path is materially better than the initial implementation. It now uses configurable concurrency, one Valhalla multi-contour request per POI, and worker-based union processing. That was enough to get a successful live OSM refresh with real Warsaw counts instead of the old sample fallback state.
 
 ## Context and Orientation
 

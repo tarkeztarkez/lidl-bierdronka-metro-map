@@ -4,10 +4,15 @@ import { join } from "node:path";
 import { ensureProjectDirs } from "../lib/paths";
 import { DEFAULT_MINUTES_RANGE } from "../lib/constants";
 import { fetchAndNormalizeMetros, fetchAndNormalizeStores } from "./osm";
-import { buildAndPersistLayers } from "./overlay-cache";
-import { requestIsochrone } from "./valhalla";
+import { buildAndPersistLayers, loadNormalizedPoints } from "./overlay-cache";
 import type { CacheMetadata } from "../lib/types";
 import { cacheDir } from "../lib/paths";
+
+function usedSampleFallback(
+  points: Array<{ properties: { source?: string } }>,
+): boolean {
+  return points.some((point) => point.properties.source === "sample");
+}
 
 function minuteRange(): number[] {
   return Array.from(
@@ -17,17 +22,28 @@ function minuteRange(): number[] {
 }
 
 export async function runRefreshPipeline(): Promise<CacheMetadata> {
+  console.time("refresh:total");
   await ensureProjectDirs();
-  const [stores, metros] = await Promise.all([fetchAndNormalizeStores(), fetchAndNormalizeMetros()]);
+  const reuseRawCache = Bun.env.REFRESH_SKIP_FETCH === "1";
+  console.time("refresh:osm");
+  const [stores, metros] = await (
+    reuseRawCache
+      ? Promise.all([loadNormalizedPoints("store"), loadNormalizedPoints("metro")])
+      : Promise.all([fetchAndNormalizeStores(), fetchAndNormalizeMetros()])
+  );
+  console.timeEnd("refresh:osm");
+  console.time("refresh:layers");
   const [storeLayers, metroLayers] = await Promise.all([
-    buildAndPersistLayers("store", stores, minuteRange(), requestIsochrone),
-    buildAndPersistLayers("metro", metros, minuteRange(), requestIsochrone),
+    buildAndPersistLayers("store", stores, minuteRange()),
+    buildAndPersistLayers("metro", metros, minuteRange()),
   ]);
+  console.timeEnd("refresh:layers");
+  const usedFallback = usedSampleFallback(stores) || usedSampleFallback(metros);
 
   const generatedAt = new Date().toISOString();
   const metadata: CacheMetadata = {
     generatedAt,
-    source: "refresh",
+    source: usedFallback ? "refresh-fallback-sample" : "refresh",
     supportedMinutes: DEFAULT_MINUTES_RANGE,
     counts: {
       stores: stores.length,
@@ -46,5 +62,6 @@ export async function runRefreshPipeline(): Promise<CacheMetadata> {
   };
 
   await writeFile(join(cacheDir, "metadata.json"), JSON.stringify(metadata, null, 2));
+  console.timeEnd("refresh:total");
   return metadata;
 }

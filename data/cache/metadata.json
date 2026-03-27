@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-03-27T13:51:20.998Z",
+  "generatedAt": "2026-03-27T15:49:14.690Z",
   "source": "refresh",
   "supportedMinutes": {
     "min": 1,
     "max": 30
   },
   "counts": {
-    "stores": 6,
-    "metros": 6
+    "stores": 100,
+    "metros": 62
   },
   "layers": {
     "store": {
       "category": "store",
-      "poiCount": 6,
+      "poiCount": 100,
       "minuteRange": {
         "min": 1,
         "max": 30
@@ -49,12 +49,12 @@
         29,
         30
       ],
-      "updatedAt": "2026-03-27T13:51:20.998Z",
+      "updatedAt": "2026-03-27T15:49:14.690Z",
       "source": "valhalla-or-fallback"
     },
     "metro": {
       "category": "metro",
-      "poiCount": 6,
+      "poiCount": 62,
       "minuteRange": {
         "min": 1,
         "max": 30
@@ -91,7 +91,7 @@
         29,
         30
       ],
-      "updatedAt": "2026-03-27T13:51:20.998Z",
+      "updatedAt": "2026-03-27T15:49:14.690Z",
       "source": "valhalla-or-fallback"
     }
   },

@@ -35,7 +35,19 @@ This pulls Warsaw store and metro data from Overpass and rebuilds cached per-min
 bun run refresh:data
 ```
 
-If Overpass or Valhalla is unavailable, the backend falls back to bundled sample geometry so the UI still works.
+Useful env vars:
+
+- `REFRESH_CONCURRENCY=16` to control refresh parallelism
+- `OVERPASS_URL` to force a single Overpass endpoint
+- `OVERPASS_URLS=url1,url2,...` to provide a custom endpoint failover list
+
+The refresh pipeline now:
+
+- batches all minute contours for a POI into one Valhalla request
+- uses worker-based union builds for the minute layers
+- retries across multiple Overpass endpoints for live OSM fetches
+
+If Overpass or Valhalla is unavailable, the backend falls back to bundled sample geometry so the UI still works, and the API marks that response as fallback data.
 
 ## Start The App
 

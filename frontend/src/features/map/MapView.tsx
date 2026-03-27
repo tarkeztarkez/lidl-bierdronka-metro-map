@@ -124,12 +124,13 @@ export function MapView({
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
 
-          <Pane name="overlayPane" style={{ zIndex: 430 }} />
-          <Pane name="sourcePane" style={{ zIndex: 440 }} />
+          <Pane name="access-overlay-pane" style={{ zIndex: 430 }} />
+          <Pane name="access-source-pane" style={{ zIndex: 440 }} />
 
           {overlayGeometry ? (
             <GeoJSON
               data={overlayGeometry as never}
+              pane="access-overlay-pane"
               style={() => ({
                 color: '#f1b64c',
                 weight: 2,
@@ -144,6 +145,7 @@ export function MapView({
             <CircleMarker
               key={point.id ?? `${point.kind}-${point.name}-${point.position.join(',')}`}
               center={[point.position[1], point.position[0]]}
+              pane="access-source-pane"
               pathOptions={{
                 ...sourceStyle(point.kind),
                 weight: 2,
